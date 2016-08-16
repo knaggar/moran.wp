@@ -6,7 +6,7 @@
 * Description: contains functions and definations for theme and other extra plugins (found in 'includes' folder).
 */
 
-// Theme plugins in 'includesludes' folder
+// Theme plugins in 'includes' folder
   // add theme customizer
   require get_template_directory() . '/includes/wp_customizer.php';
   // Clean html head
