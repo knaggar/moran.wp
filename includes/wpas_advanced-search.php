@@ -7,12 +7,16 @@
 * Description: form functions and options for WP advanced search framework
 *
 */
+
+// Include WPAS
+require_once('wp-advanced-search/wpas.php');
+
 // advanced search form
 function advanced_search_form(){
   $args = array();
   // Query for custom post types
   $args['wp_query'] = array(
-    'post_type' => array('policy_analysis', 'facts_budgets', 'research', 'urban_archive');
+    'post_type' => array('policy_analysis', 'facts_budgets', 'research', 'urban_archive'),
     'orderby'   => 'title',
     'order'     => 'ASC'
   );

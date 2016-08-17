@@ -69,7 +69,7 @@ add_action('init', 'style_script_enqueue');
 // Theme plugins in 'includes' folder
   // add theme customizer
   require get_template_directory() . '/includes/wp_customizer.php';
-  // Clean html head
+  // Clean html HEAD
   require get_template_directory() . '/includes/wp_clean-head.php';
   // Add Custom Post Type
   require get_template_directory() . '/includes/wp_custom-post-type.php';
@@ -77,3 +77,5 @@ add_action('init', 'style_script_enqueue');
   require get_template_directory() . '/includes/wp_custom-taxonomy.php';
   // Add Share Buttons
   require get_template_directory() . '/includes/wp_social-share.php';
+  // Add WP Advanced Search framework
+  require get_template_directory() . '/includes/wpas_advanced-search.php';
