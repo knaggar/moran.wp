@@ -11,3 +11,28 @@ Text Domain: moran
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+/* GENERAL
+---------------------*/
+*, *:before, *:after {box-sizing:border-box}
+html,body,ul,form *{margin:0;padding:0}
+html {height:100%}
+/* HEADING
+---------------------*/
+h1 {margin: 0.75em 0}
+h2 {margin: 0.688em 0}
+h3 {margin: 0.625em 0}
+h4 {margin: 0.563em 0}
+h5 {margin: 0.5em 0}
+h6 {margin: 0.438em 0}
+/* CONTENT
+---------------------*/
+a {text-decoration: none;}
+form * {background:none;border:none;outline:none;font:inherit}
+img {max-width:100%;height:auto;vertical-align:middle;}
+ul, li {list-style:none}
+ol li {list-style: inherit}
+table, td {width:auto}
+table {margin:1.5em 0;font-size:inherit;max-width:100%;border-collapse:collapse;border-spacing:0;}
+article ul {list-style: inherit}
+article li {line-height: 1.8;}

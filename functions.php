@@ -20,16 +20,19 @@ if (!function_exists('moran_setup')){
     // Add navigation
     register_nav_menus(array(
       'primary' => __('Primary Naviation', 'moran'),
-
+      'category'=> __('Category Navigation', 'moran')
     ));
     // Add support for post thumbnails
     add_theme_support('post-thumbnails');
     // Post thumbnails sizes
-    add_image_size('');
+    add_image_size('focus', 550, 200, true);
+    add_image_size('normal', 265, 200, true);
+    add_image_size('single', 1120, 415, true);
   }
 }
 add_action('after_setup_theme', 'moran_setup');
 // Add theme styles and scripts
+function style_script_enqueue(){
   // update jquery version
   function jquery_update(){
     if(!is_admin()){
@@ -39,7 +42,6 @@ add_action('after_setup_theme', 'moran_setup');
     }
   }
   add_action('init', 'jquery_update');
-function style_script_enqueue(){
   /* Styles */
   // RESET.css
   wp_register_style('reset', get_template_directory_uri(). '/assets/styles/reset.css','', filemtime(get_stylesheet_directory(). '/assets/styles/reset.css'));

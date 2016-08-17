@@ -19,6 +19,19 @@
 </head>
 <body <?php body_class(); ?>>
   <header>
-
+    <?php // Show logo
+      if(get_theme_mod('logo')):
+    ?>
+    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home" class="logo">
+      <img src="<?php echo esc_url(get_theme_mod('logo'));?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" />
+    </a>
+    <?php else: ?>
+      <h1>
+        <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
+          <?php echo bloginfo('name'); ?>
+        </a>
+      </h1>
+    <?php endif; ?>
+    
   </header>
   <main>
