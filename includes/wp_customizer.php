@@ -1,10 +1,27 @@
 <?php
 /**
-* @package moran
-* @subpackage archive template
-* @version 1.5
-* Template Name: Archive template
-* Description: Display taxonomy queries.
 *
-* To be replaced with index template.
+* @package moran
+* @subpackage Theme customizer
+* @version 1.5
+* Description: Add custom options to handle with theme
+*
 */
+
+// Logo uploader
+function theme_customizer($wp_customize){
+  $wp_customize->add_section('logo_section', array(
+    'title'       => __('Logo', 'moran'),
+    'priority'    => 30,
+    'description' => 'Upload a logo to replace the default site name and description in the header'
+  ));
+  $wp_customize->add_setting('logo');
+  $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'logo',
+    array(
+      'label'    => __( 'Logo', 'moran' ),
+      'section'  => 'logo_section',
+      'settings' => 'logo',
+    )
+  ));
+}
+add_action('customize_register', 'theme_customizer');
