@@ -9,7 +9,7 @@
 ?>
 </main>
 <footer>
-
+  <?php get_template_part('templates/footer', 'credit'); ?>
 </footer>
 <?php wp_footer(); ?>
 </body>

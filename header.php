@@ -31,7 +31,12 @@
           <?php echo bloginfo('name'); ?>
         </a>
       </h1>
-    <?php endif; ?>
-    
+    <?php endif;
+    // Show Category navigation
+    wp_nav_menu(array(
+      'theme_location' => 'category'
+    ));
+    ?>
+
   </header>
   <main>

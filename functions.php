@@ -7,6 +7,10 @@
 * Description: contains functions and definations for theme and other extra plugins (found in 'includes' folder).
 *
 */
+// scale content width
+if (!isset($content_width)) {
+  $content_width = 1140;
+}
 
 // Theme defaults and registers support
 if (!function_exists('moran_setup')){
@@ -33,15 +37,6 @@ if (!function_exists('moran_setup')){
 add_action('after_setup_theme', 'moran_setup');
 // Add theme styles and scripts
 function style_script_enqueue(){
-  // update jquery version
-  function jquery_update(){
-    if(!is_admin()){
-      wp_deregister_script('jquery');
-      wp_register_script('jquery', get_template_directory_uri(). '/assets/scripts/jquery-3.1.0.min.js');
-      wp_enqueue_script('jquery');
-    }
-  }
-  add_action('init', 'jquery_update');
   /* Styles */
   // RESET.css
   wp_register_style('reset', get_template_directory_uri(). '/assets/styles/reset.css','', filemtime(get_stylesheet_directory(). '/assets/styles/reset.css'));
@@ -67,7 +62,15 @@ function style_script_enqueue(){
   wp_enqueue_script('theme');
 }
 add_action('init', 'style_script_enqueue');
-
+/* update jquery version
+function jquery_update(){
+  if(!is_admin()){
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', get_template_directory_uri(). '/assets/scripts/jquery-3.1.0.min.js');
+    wp_enqueue_script('jquery');
+  }
+}
+add_action('init', 'jquery_update');*/
 // Theme plugins in 'includes' folder
   // add theme customizer
   require get_template_directory() . '/includes/wp_customizer.php';

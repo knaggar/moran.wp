@@ -6,3 +6,7 @@
 * Template Name: page template
 * Description: Display single pages's content, thumbnails and/or any other attachements (such as custom fields).
 */
+
+get_header();
+
+get_footer();

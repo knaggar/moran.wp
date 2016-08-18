@@ -1,10 +1,11 @@
 <?php
 /**
 * @package moran
-* @subpackage archive template
+* @subpackage Credit
 * @version 1.5
-* Template Name: Archive template
-* Description: Display taxonomy queries.
+* Template Name: credit template
+* Description: credit for license of content and website.
+* called by footer.php only
 *
-* To be replaced with index template.
 */
+echo _e('except for theme design & develop, or mentioned elsewhere,<br /> This work is provided under a Creative Commons License', 'moran');
