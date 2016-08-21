@@ -33,6 +33,7 @@ $args = array(
   echo '<div class="featured_article-thumbnail">';
     the_post_thumbnail(); // thumbnail size shall be added
   echo '</div>';
+  echo '<div class="featured_article-text">'
 // article title
   echo '<h2 class="featured_article-title"><a href="';
     the_permalink();
@@ -46,5 +47,5 @@ $args = array(
   the_permalink();
   echo '">';
   echo _e('Read more', 'moran');
- echo '</a></div></div></article>'; // end of article-body
+ echo '</a></div></div></div></article>'; // end of article-body
 endwhile;

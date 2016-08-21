@@ -18,16 +18,16 @@ get_header();
   $outs = 'objects';
   $opr = 'and';
   $post_types = get_post_types($args, $outs, $opr);
-
   if (have_posts()):
     echo '<ul class="main_filter">';
     foreach ($post_types as $post_type) {
-      echo '<li><a href="#" data-filter="'.  $post_type->name . '">' . $post_type->labels->menu_name . '</a></li>';
+      echo '<li><a href="#" data-filter="'. $post_type->name . '">' . $post_type->labels->menu_name . '</a></li>';
     }
-    echo '<li><a href="#" class="selected" data-filter="*"';
+    echo '<li><a href="#" class="selected" data-filter="*">';
     echo _e('Show all', 'moran');
     echo '</a></li></ul>';
   endif;
+  // show category articles
   while(have_posts()): the_post();
     get_template_part('templates/article', get_post_format());
   endwhile;
