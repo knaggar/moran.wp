@@ -24,7 +24,7 @@ if (!function_exists('moran_setup')){
     // Add navigation
     register_nav_menus(array(
       'primary' => __('Primary Naviation', 'moran'),
-      'category'=> __('Category Navigation', 'moran')
+      'category' => __('Category Navigation', 'moran')
     ));
     // Add support for post thumbnails
     add_theme_support('post-thumbnails');
@@ -36,41 +36,59 @@ if (!function_exists('moran_setup')){
 }
 add_action('after_setup_theme', 'moran_setup');
 // Add theme styles and scripts
-function style_script_enqueue(){
-  /* Styles */
-  // RESET.css
-  wp_register_style('reset', get_template_directory_uri(). '/assets/styles/reset.css','', filemtime(get_stylesheet_directory(). '/assets/styles/reset.css'));
-  wp_enqueue_style('reset');
-  // GLOBE.css
-  wp_register_style('theme', get_template_directory_uri(). '/assets/styles/globe.css','', filemtime(get_stylesheet_directory(). '/assets/styles/globe.css'));
-  wp_enqueue_style('theme');
-  // RTL.css
-  wp_register_style('rtl', get_template_directory_uri(). '/assets/styles/rtl.css','', filemtime(get_stylesheet_directory(). '/assets/styles/rtl.css'));
-  wp_enqueue_style('rtl');
-  // RESPONSIVE.css
-  wp_register_style('responsive', get_template_directory_uri(). '/assets/styles/responsive.css','', filemtime(get_stylesheet_directory(). '/assets/styles/responsive.css'));
-  wp_enqueue_style('responsive');
-  /* Scripts */
-  // imagesLoaded
-  wp_register_script('imagesLoaded', get_template_directory_uri(). '/assets/scripts/imagesloaded.pkgd.min.js' );
-  wp_enqueue_script('imagesLoaded');
-  // isotope
-  wp_register_script('isotope', get_template_directory_uri(). '/assets/scripts/isotope.pkgd.min.js' );
-  wp_enqueue_script('isotope');
-  // GLOBE.js
-  wp_register_script('theme', get_template_directory_uri(). '/assets/scripts/globe.js' );
-  wp_enqueue_script('theme');
-}
-add_action('init', 'style_script_enqueue');
-/* update jquery version
-function jquery_update(){
-  if(!is_admin()){
-    wp_deregister_script('jquery');
-    wp_register_script('jquery', get_template_directory_uri(). '/assets/scripts/jquery-3.1.0.min.js');
-    wp_enqueue_script('jquery');
+  // update jQuery version
+  function jquery_update(){
+    if(!is_admin()){
+      wp_deregister_script('jquery');
+      wp_register_script('jquery', get_template_directory_uri(). '/assets/scripts/jquery-3.1.0.min.js');
+      wp_enqueue_script('jquery');
+    }
   }
+  add_action('init', 'jquery_update');
+
+  function style_script_enqueue(){
+    /* Styles */
+    // RESET.css
+    wp_register_style('reset', get_template_directory_uri(). '/assets/styles/reset.css','', filemtime(get_stylesheet_directory(). '/assets/styles/reset.css'));
+    wp_enqueue_style('reset');
+    // GLOBE.css
+    wp_register_style('theme', get_template_directory_uri(). '/assets/styles/globe.css','', filemtime(get_stylesheet_directory(). '/assets/styles/globe.css'));
+    wp_enqueue_style('theme');
+    // RTL.css
+    wp_register_style('rtl', get_template_directory_uri(). '/assets/styles/rtl.css','', filemtime(get_stylesheet_directory(). '/assets/styles/rtl.css'));
+    wp_enqueue_style('rtl');
+    // RESPONSIVE.css
+    wp_register_style('responsive', get_template_directory_uri(). '/assets/styles/responsive.css','', filemtime(get_stylesheet_directory(). '/assets/styles/responsive.css'));
+    wp_enqueue_style('responsive');
+    /* Scripts */
+    // imagesLoaded
+    wp_register_script('imagesLoaded', get_template_directory_uri(). '/assets/scripts/imagesloaded.pkgd.min.js' );
+    wp_enqueue_script('imagesLoaded');
+    // isotope
+    wp_register_script('isotope', get_template_directory_uri(). '/assets/scripts/isotope.pkgd.min.js' );
+    wp_enqueue_script('isotope');
+    // GLOBE.js
+    wp_register_script('theme-js', get_template_directory_uri(). '/assets/scripts/globe.js', '', '',true );
+    wp_enqueue_script('theme-js');
+  }
+  add_action('init', 'style_script_enqueue');
+// Modify language switcher title
+function my_flag_title($title) {
+  $slug_ar = 'u';
+  if ($title == 'ar'){
+    return $slug_ar;
+  }
+  return $title;
 }
-add_action('init', 'jquery_update');*/
+add_filter('pll_flag_title', 'my_flag_title', 10, 2);
+// remove core body classes
+function body_classes($classes){
+  if ( isset($classes['blog'] )) {
+    unset( $classes['blog'] );
+  }
+  return $classes;
+}
+add_filter('body_class', 'body_classes');
 // Theme plugins in 'includes' folder
   // add theme customizer
   require get_template_directory() . '/includes/wp_customizer.php';
@@ -81,6 +99,6 @@ add_action('init', 'jquery_update');*/
   // Add Custom Taxonomies
   require get_template_directory() . '/includes/wp_custom-taxonomy.php';
   // Add Share Buttons
-  require get_template_directory() . '/includes/wp_social-share.php';
+  require get_template_directory() . '/includes/wp_social-service.php';
   // Add WP Advanced Search framework
   require get_template_directory() . '/includes/wpas_advanced-search.php';
