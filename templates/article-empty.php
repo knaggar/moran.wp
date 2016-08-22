@@ -1,10 +1,13 @@
 <?php
 /**
 * @package moran
-* @subpackage archive template
+* @subpackage Article Empty
 * @version 1.5
-* Template Name: Archive template
-* Description: Display taxonomy queries.
+* Template Name: Empty Archive template
+* Description: Display message if no article found, even in search.
+* called by archive.php
 *
-* To be replaced with index template.
 */
+echo '<p>';
+echo _e('There is no content here, please try again later', 'moran');
+echo '</p>';

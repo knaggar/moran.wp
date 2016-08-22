@@ -8,10 +8,8 @@
 * called by index.php only
 *
 */
-echo '<h1 class="featured_title">';
-echo _e('Chosen Article', 'moran');
-echo '</h1>';
-// Query to show only featured article which has thumbnail
+?>
+<?php // Query to show only featured article which has thumbnail
 $args = array(
  'posts_per_page' => 1,
  'post_type'      => array('policy_analysis','facts_budgets'),
@@ -20,33 +18,31 @@ $args = array(
                                 'field'   => 'slug',
                                 'terms'   => array('housing', 'planning', 'facilities'))
                     ),
-                    'meta_query' => array('relation'=>'AND',
-                          array('key'=>'_thumbnail_id'),
-                          array('key'=>'featured_post','value'=>'featured','compare'=>'LIKE')
-                          )
-  );
-  $featured_posts = new WP_Query($args);
-  while ($featured_posts->have_posts()):
-    $featured_posts->the_post();
-  // Feature article contents
-  echo '<article id="article-'; the_ID(); echo '" class="featured_article">';
-// article thumbnail
-  echo '<div class="featured_article-thumbnail">';
-    the_post_thumbnail(); // thumbnail size shall be added
-  echo '</div>';
-  echo '<div class="featured_article-text">';
-// article title
-  echo '<h2 class="featured_article-title"><a href="';
-    the_permalink();
-  echo '">';
-    the_title();
-  echo '</a></h2>';
-// article content
- echo '<div class="featured_article-body">';
-  the_excerpt();
- echo '<div class="btn_read-more"><a href="';
-  the_permalink();
-  echo '">';
-  echo _e('Read more', 'moran');
- echo '</a></div></div></div></article>'; // end of article-body
-endwhile;
+  'meta_query'    => array('relation'=>'AND',
+        array('key'=>'_thumbnail_id'),
+        array('key'=>'featured_post','value'=>'featured','compare'=>'LIKE')
+  )
+);
+$featured_posts = new WP_Query($args);
+
+while ($featured_posts->have_posts()):
+$featured_posts->the_post();  ?>
+
+  <article id="article-<?php the_ID(); ?>" class="featured_article">
+    <div class="featured_article-thumbnail">
+      <?php the_post_thumbnail(); // thumbnail size shall be added ?>
+    </div>
+    <div class="featured_article-text">
+      <h2 class="featured_article-title">
+        <a href="<?php the_permalink();?> "><?php the_title(); ?></a>
+      </h2>
+      <div class="featured_article-body">
+        <?php the_excerpt(); ?>
+        <div class="btn_read-more">
+          <a href="<?php the_permalink(); ?>"><?php echo _e('Read more', 'moran');?> </a>
+        </div>
+      </div>
+    </div>
+  </article>
+  
+<?php endwhile;
