@@ -26,14 +26,15 @@ $args = array(
                           )
   );
   $featured_posts = new WP_Query($args);
-  while ($featured_posts->have_posts()): $featured_posts->the_post();
+  while ($featured_posts->have_posts()):
+    $featured_posts->the_post();
   // Feature article contents
   echo '<article id="article-'; the_ID(); echo '" class="featured_article">';
 // article thumbnail
   echo '<div class="featured_article-thumbnail">';
     the_post_thumbnail(); // thumbnail size shall be added
   echo '</div>';
-  echo '<div class="featured_article-text">'
+  echo '<div class="featured_article-text">';
 // article title
   echo '<h2 class="featured_article-title"><a href="';
     the_permalink();

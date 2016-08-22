@@ -8,5 +8,7 @@
 */
 
 get_header();
-
+while(have_posts()): the_post();
+  get_template_part('templates/article', 'page');
+endwhile;
 get_footer();
