@@ -8,8 +8,8 @@
 *
 */
 get_header(); ?>
-  <div class="category_articles">
-    <div class="articles_header header">
+  <div class="articles_category">
+    <div class="category_header header">
     <?php
     // Show title of custom taxonomy
     $term = get_term_by( 'slug', get_query_var( 'term' ),   get_query_var( 'taxonomy' ) );
@@ -39,7 +39,7 @@ get_header(); ?>
       </ul>
     <?php endif; ?>
     </div> <!-- End of Category Header -->
-    <div class="articles_body body">
+    <div class="category_body body">
       <?php if(have_posts()): ?>
       <div class="body_main grid">
         <?php // show category articles

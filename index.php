@@ -10,7 +10,7 @@
 get_header();
 
   if(is_front_page()): ?>
-  <div class="front_featured">
+  <div class="article_featured">
     <div class="featured_header header">
       <h1 class="featured_title">
         <?php echo _e('Chosen Article', 'moran');?>

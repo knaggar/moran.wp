@@ -9,10 +9,10 @@
 */
 // Share Articles
 function social_share(){
-  $url = get_post_permalink();
+
+  $url = urlencode(get_post_permalink());
   $title = str_replace('', '%20', get_the_title());
   $source = get_bloginfo('name');
-
   $services = array (
       'facebook' => array(
           'url' => 'https://www.facebook.com/sharer/sharer.php?u=' . $url .'&redirect_uri='. $url,
@@ -29,7 +29,7 @@ function social_share(){
   echo '<ul class="social-share">';
   foreach ($services as $name => $service) {
     echo '<li class="'. $name .'">';
-    $href = sprintf($service['url'], $url, urlencode($title));
+    $href = sprintf($service['url'], $url, urlencode($title), urlencode($source));
     $icon = $service['i'];
     echo '<a href="'. $href .'" title="'.$service['t'].'" target="_blank">'. $icon .'</a>';
     echo '</li>';

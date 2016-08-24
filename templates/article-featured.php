@@ -32,17 +32,17 @@ $featured_posts->the_post();  ?>
     <div class="featured_article-thumbnail">
       <?php the_post_thumbnail(); // thumbnail size shall be added ?>
     </div>
-    <div class="featured_article-text">
-      <h2 class="featured_article-title">
+    <div class="featured_article-text article_text">
+      <h2 class="featured_article-title article_title">
         <a href="<?php the_permalink();?> "><?php the_title(); ?></a>
       </h2>
-      <div class="featured_article-body">
+      <div class="featured_article-body article_body">
         <?php the_excerpt(); ?>
-        <div class="btn_read-more">
+        <div class="btn_read-more btn">
           <a href="<?php the_permalink(); ?>"><?php echo _e('Read more', 'moran');?> </a>
         </div>
       </div>
     </div>
   </article>
-  
+
 <?php endwhile;
