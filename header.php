@@ -25,9 +25,7 @@
       <div class="branding_switch header-item inline">
         <div class="switch_btn ctrl-btn">
             <span class="btn_lang">
-              <i>
-                <?php pll_the_languages(array('hide_current'=> 1, 'display_names_as'=> 'slug')); ?>
-              </i>
+              <?php pll_the_languages(array('hide_current'=> 1, 'display_names_as'=> 'slug')); ?>
             </span>
             <span class="btn_search">
               <i class="fa fa-search"></i>

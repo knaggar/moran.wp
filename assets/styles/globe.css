@@ -14,7 +14,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
   BODY
 --------------*/
-body {font-family:'Open Sans', sans-serif;font-size:14px;}
+html {font-size:87.5%}
+body {font-family:'Open Sans', sans-serif;}
 h1, h2, h3, h4, h5, h6, a, li, form * {font-family:'Oswald', sans-serif}
 h1 {font-size:32px;font-size:2em}
 h2 {font-size:26px;font-size:1.625em}
@@ -30,12 +31,11 @@ a {color:#101010}
 .site_container {overflow: hidden}
 .container {/*padding:0 10px*/}
 .main_container {margin:145px 10% 60px}
-.overlay_container {padding:100px 0;margin:0 10%;}
-.overlay_row {display: flex;height:100%}
+.overlay_container {margin:0 5%;height:100%}
 .row {width:100%;position:relative}
 .row:after {content:"";display:table;clear:both}
 /*-------------
-Additional Selectors
+  Modifiers
 --------------*/
 .is_overlay {overflow:hidden}
 .hidden {display:none;}
@@ -47,7 +47,7 @@ Additional Selectors
 --------------*/
 header, header *{transition: all .2s ease}
 header {position:fixed;z-index:1000;width:100%;top:0;left:0;}
-header [class^="header_"]:not(.header_callables) {float:left;padding:1em 2em}
+header [class^="header_"]:not(.header_callables) {float:left;padding:.85em 1em}
 .is_overlay header {bottom:0}
 
 .header_branding {width:65%;background:#101010}
@@ -55,26 +55,35 @@ header [class^="header_"]:not(.header_callables) {float:left;padding:1em 2em}
 .header_navigation .inline {float:left!important}
 .nav-cat_menu a {/*color:#fff;*/font-weight:bold;}
 
-.ctrl-btn {width:55px;height:55px;display:block;text-align:center;overflow: hidden}
-.ctrl-btn span {display:block;line-height:55px;color:#fff;font-size:2rem;cursor: pointer}
+.ctrl-btn {width:35px;height:35px;display:block;text-align:center;overflow: hidden}
+.ctrl-btn span {display:block;line-height:35px;color:#fff;font-size:1.5rem;cursor: pointer}
 .ctrl-btn span:hover {color:#405db8}
 
 .branding_switch {background:#fff}
-.btn_lang a {text-transform: uppercase;font-size:1.4rem;font-weight: bold}
+.btn_lang a {text-transform: uppercase;font-size:1.4rem;font-weight: bold;display:block}
 .btn_lang a:hover{color:#405db8}
-.branding_site .logo {display:block;max-width:180px;height:auto}
-
-.btn_cat-menu{margin-top:-55px}
+.branding_site .logo {display:block;max-width:115.5px;height:auto}
+.branding_switch span {color:#101010}
+.btn_cat-menu{margin-top:-35px}
 
 .header_categories {background:#fff}
 
 .header_overlay {height:100%;background:#fff;}
 
-.overlay_full-menu [class^="overlay_"]:not(.overlay_row) {width:40%; margin:0 5%;float:right}
-.overlay_nav-cat a{font-size:2.75vmax}
+.overlay_full-menu {display: flex;height:100%;align-content: center;align-items: center;}
+.overlay_item {width:46%; margin:0 2%;}
+
+.overlay_nav-img ul{width:100%; max-height:100px;margin-bottom: 3em;display:none}
+.overlay_nav-cat a{font-size:2.75vmax;font-weight:bold}
 .overlay_nav-cat a:hover {color:#405db8}
-.overlay_full-about {font-size:1.2vmax;}
-.overlay_full-credit {font-size:1vmax}
+.social-profile {display:flex;font-size:2.75vmax;line-height: 35px}
+.social-profile li {margin:0 5px}
+.social-profile a {display:block;}
+
+.social-profile .facebook a:hover {color:#3b5998}
+.social-profile .twitter a:hover {color:#00aced}
+.overlay_full-about {font-size:1.5vmax;}
+.overlay_full-credit {font-size:1.35vmax}
 .widget_credit-icon {font-size:2em}
-.widget_credit-icon i {margin: 0 5px}
+.widget_credit-icon i {margin: 0 3px}
 .widget_credit .widget_item {display:inline-block;vertical-align: middle}
