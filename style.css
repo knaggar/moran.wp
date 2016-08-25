@@ -1,6 +1,6 @@
 /*
 Theme Name: moran
-Theme URI: https://github.com/kaeid/moran
+Theme URI: https://github.com/kaeid/moran.wp
 Author: Kareem A. Eid
 Author URI: http://kaeid.io
 Description: this theme is develeoped for marsadomran.info website.
@@ -10,6 +10,64 @@ License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 All other styles used in theme shall contain major elements that works almost on any implementation, unless otherwise mentioned.
-*/
+*
+COLORS
+--------------
+Black: #101010
+Blue:  #1034A6
+Purple:#7949FB
+Gray:  #B7B7B7
 
+*
+  FONTS
+-------------*/
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+
+/* Jozor */
+@font-face {
+    font-family: "JF Flat Regular";
+    src: url('assets/fonts/jozor/JF-Flat-regular.eot');
+    src: url('assets/fonts/jozor/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
+    	 url('assets/fonts/jozor/JF-Flat-regular.svg#JF Flat Regular') format('svg'),
+    	 url('assets/fonts/jozor/JF-Flat-regular.woff') format('woff'),
+    	 url('assets/fonts/jozor/JF-Flat-regular.ttf') format('truetype');
+    font-weight: normal; font-style: normal;
+}
+/* Droid */
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  src: url('assets/fonts/droid/DroidKufi-Regular.eot');
+  src: url('assets/fonts/droid/DroidKufi-Regular.eot?#iefix') format('embedded-opentype'),
+       url('assets/fonts/droid/DroidKufi-Regular.woff2') format('woff2'),
+       url('assets/fonts/droid/DroidKufi-Regular.woff') format('woff'),
+       url('assets/fonts/droid/DroidKufi-Regular.ttf') format('truetype');
+  font-style: normal; font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  src: url('assets/fonts/droid/DroidKufi-Bold.eot');
+  src: url('assets/fonts/droid/DroidKufi-Bold.eot?#iefix') format('embedded-opentype'),
+       url('assets/fonts/droid/DroidKufi-Bold.woff2') format('woff2'),
+       url('assets/fonts/droid/DroidKufi-Bold.woff') format('woff'),
+       url('assets/fonts/droid/DroidKufi-Bold.ttf') format('truetype');
+  font-style: normal; font-weight: 700;
+}
+/* Oswald */
+@font-face {
+    font-family: 'Oswald';
+    src: url('assets/fonts/oswald/oswald-light-webfont.woff2') format('woff2'),
+         url('assets/fonts/oswald/oswald-light-webfont.woff') format('woff'),
+         url('assets/fonts/droid/oswald-light-webfont.ttf') format('truetype');
+    font-weight: 400;font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('assets/fonts/oswald/oswald-bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/oswald/oswald-bold-webfont.woff') format('woff'),
+         url('assets/fonts/droid/oswald-bold-webfont.ttf') format('truetype');
+    font-weight: 700; font-style: normal;
+
+}

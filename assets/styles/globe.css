@@ -4,10 +4,60 @@ Description: contains all styles of elements, in respect of mobile-first design.
 version: 1.5
 Date updated: 4th Aug 2016
 Package: moran
-Theme URI: https://github.com/kaeid/moran
-Author: Kareem A. Eid
+Theme URI: https://github.com/kaeid/moran.wp
+Author: Kareem Eid
 Author URI: http://kaeid.io
 Text Domain: moran
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-*/
+*
+
+  BODY
+--------------*/
+body {font-family:'Open Sans', sans-serif;font-size:14px;}
+h1, h2, h3, h4, h5, h6, a, li, form * {font-family:'Oswald', sans-serif}
+h1 {font-size:32px;font-size:2em}
+h2 {font-size:26px;font-size:1.625em}
+h3 {font-size:21px;font-size:1.313em}
+h4 {font-size:18px;font-size:1.125em}
+h5 {font-size:16px;font-size:1em}
+h6 {font-size:14px;font-size:0.875em}
+p {margin:0 0 1.75em; line-height:1.6em;}
+a {color:#101010}
+/*--------------
+  GRID
+--------------*/
+.site_container {overflow: hidden}
+.container {/*padding:0 10px*/}
+.main_container {margin:145px 10% 60px}
+.overlay_container {margin:145px 10% 60px}
+.row {width:100%;position:relative}
+.row:after {content:"";display:table;clear:both}
+/*-------------
+Additional Selectors
+--------------*/
+.no-scroll{overflow:hidden}
+.hidden {display:none;}
+.inline {display:block;float:left}
+
+/*--------------
+  HEADER
+--------------*/
+header, header *{transition: all .2s ease}
+header {position:fixed;background:rgba(16,16,16,0.9);z-index:1000;width:100%;top:0;left:0}
+.no-scroll header {background:#101010}
+header [class^="header_"]:not(.header_callables) {float:left;padding:1em 2em}
+.ctrl-btn {width:55px;height:55px;display:block;text-align:center;overflow: hidden}
+.ctrl-btn span {display:block;line-height:55px;color:#fff;font-size:2rem;cursor: pointer}
+.ctrl-btn span:hover {color:#405db8}
+.header_branding {width:65%;}
+.branding_switch {background:#fff}
+.branding_site .logo {display:block;max-width:180px;height:auto}
+.btn_lang a {text-transform: uppercase;font-size:1.4rem;font-weight: bold}
+.btn_lang a:hover{color:#405db8}
+.header_navigation {width:35%;background:#1034a6}
+.header_navigation .inline {float:left!important}
+.btn_cat-menu{margin-top:-55px}
+.header_categories {background:#fff}
+
+.header_overlay {height:100%;background:#fff;}

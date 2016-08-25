@@ -4,8 +4,8 @@ Description: reset to elements and attributes forced by browsers.
 version: 1.5
 Date updated: 4th Aug 2016
 Package: moran
-Theme URI: https://github.com/kaeid/moran
-Author: Kareem A. Eid
+Theme URI: https://github.com/kaeid/moran.wp
+Author: Kareem Eid
 Author URI: http://kaeid.io
 Text Domain: moran
 License: GPL-2.0+
@@ -36,3 +36,4 @@ table, td {width:auto}
 table {margin:1.5em 0;font-size:inherit;max-width:100%;border-collapse:collapse;border-spacing:0;}
 article ul {list-style: inherit}
 article li {line-height: 1.8;}
+i {font-style:normal}

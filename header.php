@@ -18,9 +18,10 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+  <div class="site_container">
   <header>
     <div class="header_branding">
-      <div class="branding_switch">
+      <div class="branding_switch header-item inline">
         <div class="switch_btn ctrl-btn">
             <span class="btn_lang">
               <i>
@@ -32,27 +33,23 @@
             </span>
         </div>
       </div>
-      <div class="branding_logo">
-      <?php if(get_theme_mod('logo')): ?>
+      <div class="branding_site header-item inline">
+        <?php if(get_theme_mod('logo')): ?>
         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home" class="logo">
           <img src="<?php echo esc_url(get_theme_mod('logo'));?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" />
         </a>
-      <?php else: ?>
+        <?php else: ?>
         <h1>
           <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php echo bloginfo('name'); ?></a>
         </h1>
-      <?php endif; ?>
-      </div>
-    </div><!-- end of header block -->
-    <div class="header_navigation">
-      <div class="navigation_search">
-        <div class="search_btn ctrl-btn">
-          <span class="btn_search">
-            <i class="fa fa-search"></i>
-          </span>
+        <?php endif; ?>
+        <div class="search-input">
+
         </div>
       </div>
-      <div class="navigation_menu">
+    </div>
+    <div class="header_navigation">
+      <div class="navigation_menu header-item inline">
         <div class="menu_btn ctrl-btn">
           <span class="btn_cat-menu">
             <i class="fa fa-ellipsis-h"></i>
@@ -65,16 +62,28 @@
           </span>
         </div>
       </div>
-    </div><!-- end of header block -->
-    <div class="header_categories hidden">
+      <div class="navigation_search header-item inline">
+        <div class="search_btn ctrl-btn">
+          <span class="btn_search">
+            <i class="fa fa-search"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="header_categories header_callables hidden">
       <?php // Show Category navigation
       wp_nav_menu(array(
         'theme_location' => 'category',
-        'menu_class'     => 'header_cat-menu',
-        'container_id'   => 'nav-cat'
+        'container_id'   => 'header_nav-cat',
+        'container_class'   => 'header_nav-cat',
+        'menu_class'     => 'nav-cat_menu',
       ));
       ?>
     </div>
-
+    <div class="header_overlay header_callables">
+      <?php get_template_part('templates/global', 'overlay') ;?>
+    </div>
   </header>
   <main>
+    <div class="main_container container">
+      <div class="row">

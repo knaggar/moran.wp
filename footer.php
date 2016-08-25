@@ -7,7 +7,10 @@
 * Description: contains closing tags for global HTML elemetns. Also list blocks of navigation (not necessarily) and credits of website coding and contents licenses.
 */
 ?>
+</div>
+</div>
 </main>
+</div>
 <footer>
   <div class="footer_menu footer_widget">
     <?php
