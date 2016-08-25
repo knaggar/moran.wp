@@ -20,6 +20,7 @@
 <body <?php body_class(); ?>>
   <div class="site_container">
   <header>
+<div class="header-row row">
     <div class="header_branding">
       <div class="branding_switch header-item inline">
         <div class="switch_btn ctrl-btn">
@@ -70,6 +71,7 @@
         </div>
       </div>
     </div>
+  </div>
     <div class="header_categories header_callables hidden">
       <?php // Show Category navigation
       wp_nav_menu(array(
