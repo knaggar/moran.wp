@@ -71,3 +71,12 @@ Gray:  #B7B7B7
     font-weight: 700; font-style: normal;
 
 }
+/* B-Style Arabic */
+@font-face {
+    font-family: 'Bstyle';
+    src: url('asstes/fonts/b-style/b-style-ar.eot');
+    src: url('assets/fonts/b-style/b-style-ar.woff') format('woff'),
+         url('assets/fonts/b-style/b-style-ar.ttf') format('truetype');
+    font-weight: 400; font-style: normal;
+
+}

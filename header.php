@@ -70,17 +70,19 @@
       </div>
     </div>
   </div>
-    <div class="header_categories header_callables hidden">
+    <div class="header_categories header_callables <?php if(!is_home()){ echo 'hidden'; } ?>">
       <?php // Show Category navigation
       wp_nav_menu(array(
         'theme_location' => 'category',
-        'container_id'   => 'header_nav-cat',
-        'container_class'   => 'header_nav-cat',
+        'container_id'   => 'categories_nav',
+        'container_class'   => 'categories_nav',
         'menu_class'     => 'nav-cat_menu',
+        'link_before' => '<span>',
+        'link_after' => '</span>'
       ));
       ?>
     </div>
-    <div class="header_overlay header_callables">
+    <div class="header_overlay header_callables hidden">
       <?php get_template_part('templates/global', 'overlay') ;?>
     </div>
   </header>

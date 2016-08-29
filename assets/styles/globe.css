@@ -12,9 +12,9 @@ License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 *
 
-  BODY
+  GLOBAL
 --------------*/
-html {font-size:87.5%}
+html {font-size:87.5%;}
 body {font-family:'Open Sans', sans-serif;}
 h1, h2, h3, h4, h5, h6, a, li, form * {font-family:'Oswald', sans-serif}
 h1 {font-size:32px;font-size:2em}
@@ -25,38 +25,42 @@ h5 {font-size:16px;font-size:1em}
 h6 {font-size:14px;font-size:0.875em}
 p {margin:0 0 1.75em; line-height:1.6em;}
 a {color:#101010}
+
 /*--------------
   GRID
 --------------*/
 .site_container {overflow: hidden}
 .container {/*padding:0 10px*/}
-.main_container {margin:145px 10% 60px}
+.main_container {margin:67.5px 3% 30px}
 .overlay_container {margin:0 5%;height:100%}
+.widget_container {display: flex;align-items: center}
 .row {width:100%;position:relative}
 .row:after {content:"";display:table;clear:both}
+.col-overlay {width:46%;margin:0 2%}
 /*-------------
   Modifiers
 --------------*/
-.is_overlay {overflow:hidden}
-.hidden {display:none;}
+.is-overlay {overflow:hidden}
 .inline {display:block;float:left}
 .widget_item p {margin-bottom:0}
+.hidden {display:none;}
 
 /*--------------
   HEADER
 --------------*/
 header, header *{transition: all .2s ease}
 header {position:fixed;z-index:1000;width:100%;top:0;left:0;}
+.logged-in header{top: 46px}
 header [class^="header_"]:not(.header_callables) {float:left;padding:.85em 1em}
-.is_overlay header {bottom:0}
+html.is-overlay header {bottom:0}
 
 .header_branding {width:65%;background:#101010}
 .header_navigation {width:35%;background:#1034a6}
 .header_navigation .inline {float:left!important}
 .nav-cat_menu a {/*color:#fff;*/font-weight:bold;}
 
-.ctrl-btn {width:35px;height:35px;display:block;text-align:center;overflow: hidden}
-.ctrl-btn span {display:block;line-height:35px;color:#fff;font-size:1.5rem;cursor: pointer}
+.ctrl-btn {width:35px;height:35px;display:block;text-align:center;overflow: hidden;line-height:35px}
+.ctrl-btn span {display:block;color:#fff;font-size:1.5rem;cursor: pointer}
 .ctrl-btn span:hover {color:#405db8}
 
 .branding_switch {background:#fff}
@@ -66,17 +70,27 @@ header [class^="header_"]:not(.header_callables) {float:left;padding:.85em 1em}
 .branding_switch span {color:#101010}
 .btn_cat-menu{margin-top:-35px}
 
-.header_categories {background:#fff}
+.header_categories {display:none}
+
+/*.categories_nav {background:#fff;display: none;}*/
+.categories_nav .nav-cat_menu {display: flex;align-items:center;}
+.categories_nav li {width:33.333%;height:175px}
+.categories_nav a {display:block;background-size: cover;background-repeat: no-repeat;height: 100%;position: relative;}
+.categories_nav span {background:rgba(16, 16, 16, 0.9);color:#fff;position: absolute;bottom: 50%;right: 20%;font-size: 1.75rem;}
+.categories_nav .plan a {background-image:url('../img/cat-menu_plan.jpg');}
+.categories_nav .house a {background-image:url('../img/cat-menu_house.jpg');}
+.categories_nav .service a {background-image:url('../img/cat-menu_service.jpg');}
 
 .header_overlay {height:100%;background:#fff;}
 
-.overlay_full-menu {display: flex;height:100%;align-content: center;align-items: center;}
-.overlay_item {width:46%; margin:0 2%;}
+.overlay_full-menu {display: flex;height:100%;}
+/*.overlay_item {width:46%; margin:0 2%;}*/
+.overlay_full-menu .overlay_row {display:flex;align-items: center}
 
 .overlay_nav-img ul{width:100%; max-height:100px;margin-bottom: 3em;display:none}
-.overlay_nav-cat a{font-size:2.75vmax;font-weight:bold}
+.overlay_nav-cat a{font-size:2.75vmax;}
 .overlay_nav-cat a:hover {color:#405db8}
-.social-profile {display:flex;font-size:2.75vmax;line-height: 35px}
+.social-profile {display:flex;font-size:2.75rem;line-height: 35px}
 .social-profile li {margin:0 5px}
 .social-profile a {display:block;}
 
@@ -87,3 +101,47 @@ header [class^="header_"]:not(.header_callables) {float:left;padding:.85em 1em}
 .widget_credit-icon {font-size:2em}
 .widget_credit-icon i {margin: 0 3px}
 .widget_credit .widget_item {display:inline-block;vertical-align: middle}
+
+/*--------------
+  ARTICLE
+--------------*/
+article {transition:all .3s}
+.featured_title, .article_title {margin:0}
+.article_body p:first-child {font-weight:bold;font-size:1.2em}
+.btn_read-more {border:1px solid #b7b7b7;display:inline-block}
+.btn_read-more a {display: block;padding:3px 8px;font-weight:bold;}
+.btn_read-more:hover a {background:#1034a6;color:#fff!important}
+
+/*--------------
+  ARTICLE / Featured
+--------------*/
+.featured_title {color:#b7b7b7;font-weight:normal}
+.featured_article-body {border-bottom:8px solid #101010;padding:20px;position:relative}
+.featured_article-body:after {content:"";position:absolute;background:#1034a6;height:8px;width:0;bottom:-8px;right:0;transition: width .3s }
+.featured_article-thumbnail {display:none}
+.featured_article:hover a {color:#1034A6}
+.featured_article:hover .featured_article-body:after {width:100%}
+.featured_article:hover .btn_read-more {border-color:#1034A6}
+
+/*--------------
+  FOOTER
+--------------*/
+footer {background:#101010;position:relative;color:#fff;font-size:81.25%}
+footer a {color:#fff}
+footer a:hover {color:#3a56ae}
+
+.footer_widget {position:relative;padding:25px 30px;}
+.footer_widget:first-child {border-bottom:8px solid #fff}
+/*.footer_widget:nth-child(2n+1):after {content:"";position:absolute;width:100%;height:3px;background:#fff;bottom:0;right:0;left:0;transform:perspective(70px) rotate(1deg)}*/
+.widget_item {z-index:101}
+
+.widget_menu {/*padding-right:50%;*/text-align:left}
+.menu-item-has-children a {font-weight:bold}
+.menu-item-has-children ul a {font-weight:normal}
+.widget_logo-text {color:#4c67bc;font:normal 4em/0.5 'Bstyle', Arial;position: absolute;top:20px;z-index:99;display:none}
+.widget_container {border-bottom: 8px solid #fff}
+.widget_container .footer_widget {border: none}
+.widget_about {width:65%;border-left:8px solid #fff!important}
+.widget_social-profiles {width:35%;text-align:center;padding:0}
+.widget_social-profiles ul {display:block}
+.widget_social-profiles li {display: inline-block;margin:0 10px}

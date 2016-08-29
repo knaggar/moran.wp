@@ -12,8 +12,36 @@ License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
   More than 768xp width
---------------*/
-
+----------------------------------------*/
 @media only screen and (min-width:769px){
-  html {font-size:100%}  
+/*--------------
+  GLOBAL
+--------------*/
+html {font-size:100%}
+/*--------------
+  GRID
+--------------*/
+.main_container {margin:135px 10% 60px}
+.col-widget {float:right}
+/*--------------
+  HEADER
+--------------*/
+.logged-in header{top: 32px}
+.branding_site .logo {max-width:182px}
+.ctrl-btn {width:55px;height:55px;line-height: 55px}
+.home .btn_cat-menu {margin-top:-55px}
+.btn_cat-menu {margin-top:0}
+.home .header_categories {/*display:block;/* remove at the end */display: none}
+/*--------------
+  ARTICLE / Featured
+--------------*/
+.article_featured {width:50%;margin: 0 auto}
+/*--------------
+  FOOTER
+--------------*/
+footer {font-size:87.5%}
+.footer_widget:first-child {border:none}
+.widget_menu {width:25%}
+.widget_container, .footer_widget.widget_credit {border-right:8px solid #fff;width:75%;}
+.footer_widget.widget_credit {float:left;}
 }

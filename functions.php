@@ -68,7 +68,7 @@ add_action('after_setup_theme', 'moran_setup');
     wp_register_script('isotope', get_template_directory_uri(). '/assets/scripts/isotope.pkgd.min.js' );
     wp_enqueue_script('isotope');
     // GLOBE.js
-    wp_register_script('theme-js', get_template_directory_uri(). '/assets/scripts/globe.js', '', '',true );
+    wp_register_script('theme-js', get_template_directory_uri(). '/assets/scripts/globe.js', '', filemtime(get_stylesheet_directory(). '/assets/scripts/globe.js'),true );
     wp_enqueue_script('theme-js');
   }
   add_action('init', 'style_script_enqueue');

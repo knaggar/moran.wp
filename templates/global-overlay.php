@@ -11,35 +11,40 @@
 <div class="overlay_container">
   <div class="overlay_full-menu">
   <div class="overlay_row row">
-    <div class="overlay_nav-img overlay_item inline">
-      <ul>
-        <li>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/img/cat-menu_plan.jpg" alt="" />
-        </li>
-        <li>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/img/cat-menu_house.jpg" alt="" />
-        </li>
-        <li>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/img/cat-menu_service.jpg" alt="" />
-        </li>
-      </ul>
-    </div>
-    <?php  // Show Category navigation
-        wp_nav_menu(array(
+    <div class="col-overlay inline">
+      <div class="overlay_nav-img overlay_item">
+        <ul>
+          <li>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/cat-menu_plan.jpg" alt="" />
+          </li>
+          <li>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/cat-menu_house.jpg" alt="" />
+          </li>
+          <li>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/cat-menu_service.jpg" alt="" />
+          </li>
+        </ul>
+      </div>
+      <?php  // Show Category navigation
+      wp_nav_menu(array(
         'theme_location' => 'category',
         'container_id'   => 'overlay_nav-cat',
-        'container_class'=> 'overlay_nav-cat overlay_item inline',
-        'menu_class'     => 'nav-cat-menu',
-        )); ?>
-    <div class="overlay_full-social overlay_item inline">
-      <?php social_profile(); ?>
+        'container_class'=> 'overlay_nav-cat overlay_item',
+        'menu_class'     => 'nav-cat_menu',
+      )); ?>
     </div>
-    <div class="overlay_full-about overlay_item inline">
-      <?php $page_footer = get_posts(array('name'=>'tooba','post_type'=>'page'));
-      echo $page_footer[0]->post_content; ?>
-    </div>
-    <div class="overlay_full-credit widget_credit overlay_item inline">
-      <?php  get_template_part('templates/footer', 'credit'); ?>
+    <div class="col-overlay inline">
+      <div class="overlay_full-social overlay_item">
+        <?php social_profile(); ?>
+      </div>
+      <div class="overlay_full-about overlay_item">
+        <?php $page_footer = get_posts(array('name'=>'tooba','post_type'=>'page'));
+        echo $page_footer[0]->post_content; ?>
+      </div>
+      <div class="overlay_full-credit widget_credit overlay_item">
+        <?php  get_template_part('templates/footer', 'credit'); ?>
+      </div>
+
     </div>
     </div>
   </div>
