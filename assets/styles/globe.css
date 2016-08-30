@@ -56,7 +56,7 @@ html.is-overlay header {bottom:0}
 
 .header_branding {width:65%;background:#101010}
 .header_navigation {width:35%;background:#1034a6}
-.header_navigation .inline {float:left!important}
+.header_navigation .inline {float:right!important}
 .nav-cat_menu a {/*color:#fff;*/font-weight:bold;}
 
 .ctrl-btn {width:35px;height:35px;display:block;text-align:center;overflow: hidden;line-height:35px}
@@ -87,9 +87,9 @@ html.is-overlay header {bottom:0}
 /*.overlay_item {width:46%; margin:0 2%;}*/
 .overlay_full-menu .overlay_row {display:flex;align-items: center}
 
+.overlay_full-menu a:hover {color:#405db8}
 .overlay_nav-img ul{width:100%; max-height:100px;margin-bottom: 3em;display:none}
 .overlay_nav-cat a{font-size:2.75vmax;}
-.overlay_nav-cat a:hover {color:#405db8}
 .social-profile {display:flex;font-size:2.75rem;line-height: 35px}
 .social-profile li {margin:0 5px}
 .social-profile a {display:block;}
@@ -117,7 +117,7 @@ article {transition:all .3s}
 --------------*/
 .featured_title {color:#b7b7b7;font-weight:normal}
 .featured_article-body {border-bottom:8px solid #101010;padding:20px;position:relative}
-.featured_article-body:after {content:"";position:absolute;background:#1034a6;height:8px;width:0;bottom:-8px;right:0;transition: width .3s }
+.featured_article-body:after {content:"";position:absolute;background:#1034a6;height:8px;width:0;bottom:-8px;left:0;transition: width .3s }
 .featured_article-thumbnail {display:none}
 .featured_article:hover a {color:#1034A6}
 .featured_article:hover .featured_article-body:after {width:100%}
@@ -135,13 +135,13 @@ footer a:hover {color:#3a56ae}
 /*.footer_widget:nth-child(2n+1):after {content:"";position:absolute;width:100%;height:3px;background:#fff;bottom:0;right:0;left:0;transform:perspective(70px) rotate(1deg)}*/
 .widget_item {z-index:101}
 
-.widget_menu {/*padding-right:50%;*/text-align:left}
+.widget_menu {/*padding-right:50%;*/text-align:right}
 .menu-item-has-children a {font-weight:bold}
 .menu-item-has-children ul a {font-weight:normal}
 .widget_logo-text {color:#4c67bc;font:normal 4em/0.5 'Bstyle', Arial;position: absolute;top:20px;z-index:99;display:none}
 .widget_container {border-bottom: 8px solid #fff}
 .widget_container .footer_widget {border: none}
-.widget_about {width:65%;border-left:8px solid #fff!important}
+.widget_about {width:65%;border-right:8px solid #fff!important}
 .widget_social-profiles {width:35%;text-align:center;padding:0}
 .widget_social-profiles ul {display:block}
 .widget_social-profiles li {display: inline-block;margin:0 10px}

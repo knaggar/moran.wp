@@ -43,7 +43,9 @@
         </h1>
         <?php endif; ?>
         <div class="search-input">
-
+          <?php $advanced_search_form = new WP_Advanced_Search('advanced_search_form');
+                $advanced_search_form->the_form();
+          ?>
         </div>
       </div>
     </div>
@@ -86,6 +88,8 @@
       <?php get_template_part('templates/global', 'overlay') ;?>
     </div>
   </header>
+  <?php // Enable WP Advacned Search dubug. Remove in staging. ?>
+  <div id="wpas-debug"></div>
   <main>
     <div class="main_container container">
       <div class="row">
