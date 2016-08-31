@@ -92,4 +92,5 @@
   <div id="wpas-debug"></div>
   <main>
     <div class="main_container container">
+      <?php if (is_singular()) get_sidebar (); ?>
       <div class="row">

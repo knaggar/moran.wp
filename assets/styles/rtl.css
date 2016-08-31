@@ -48,6 +48,7 @@ body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
 .rtl .article_widget {float:right}
 .rtl .article_widget.widget_tags {text-align:right}
 .rtl .widget_download-info {direction:ltr}
+.rtl .widget_tags-list li {float:right}
 /*--------------
   FOOTER
 --------------*/

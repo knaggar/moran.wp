@@ -105,3 +105,5 @@ add_filter('body_class', 'body_classes');
   require get_template_directory() . '/includes/wp_social-service.php';
   // Add WP Advanced Search framework
   require get_template_directory() . '/includes/wpas_advanced-search.php';
+  // Add Reading options
+  //require get_template_directory() . '/includes/wp_read-options.php';

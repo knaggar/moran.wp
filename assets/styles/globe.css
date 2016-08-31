@@ -34,6 +34,7 @@ a {color:#101010}
 .main_container {margin:67.5px 3% 30px}
 .overlay_container {margin:0 5%;height:100%}
 .widget_container {display: flex;align-items: center}
+.sidebar_container {}
 .row {width:100%;position:relative}
 .row:after {content:"";display:table;clear:both}
 .col-overlay {width:46%;margin:0 2%}
@@ -195,8 +196,14 @@ ARTICLE / Archive
 
 .single_article-footer {border-top:1px solid;}
 .article_widget {width:50%;text-align: center;float:left;padding:1em}
-.article_widget [class$="-icon widget_item"] {font-size:3rem}
+.article_widget [class$="-icon widget_item"], .widget_share-action a {font-size:3rem;color:#404040}
 .article_widget.widget_tags {text-align: left}
+.widget_download-action a {background:#405db8;color:#fff;display:inline-block;padding:3px 10px}
+.widget_download-action a:hover {box-shadow:inset 3em 3em 0 rgba(255,255,255,0.2);}
+.widget_tags-list li {background:#f1f1f1;padding:0 5px;font-size:81.75%;float:left;margin:0 0 10px 5px}
+.widget_share-action li, .share_ctrl li{display: inline-block;margin:0 10px}
+
+.show-hide_btn {background:#101010}
 /*--------------
   FOOTER
 --------------*/

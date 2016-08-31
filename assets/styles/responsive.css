@@ -52,8 +52,8 @@ html {font-size:100%}
 --------------*/
 .single_article-thumbnail {max-width:75%;max-height:415px;overflow: hidden}
 .has-thumb .single_article-text {position:absolute;max-width:40%}
-.single_article-footer {display: flex}
-.article_widget {width:25%;}
+.single_article-footer .row{display: flex}
+/*.article_widget {width:25%;}*/
 
 /*--------------
   FOOTER

@@ -62,15 +62,15 @@ if (has_post_thumbnail()):
       <?php if ($document): ?>
 	    <div class="article_footer-widget article_widget widget_download">
 	       <div class="widget_download-icon widget_item">
-           <i class="fa fa-file-word-o"></i>
-         </div><?php // change file icon based of extension ?>
+           <i class="fa fa-file-word-o"></i><?php // change file icon based of extension ?>
+         </div>
 	        <div class="widget_download-info widget_item">
             <?php echo $document_size . '(.' . $document_info['extension'] . ')' ;?>
           </div>
           <div class="widget_download-action widget_item">
-	         <a href="<?php echo $document_url ?>" alt="<?php echo $document_title ?>">
-             <?php echo _e('Download', 'moran'); ?>
-           </a>
+            <h6>
+              <a href="<?php echo $document_url ?>" alt="<?php echo $document_title ?>"><?php echo _e('Download', 'moran'); ?></a>
+            </h6>
           </div>
       </div>
       <?php endif;

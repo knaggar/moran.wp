@@ -14,7 +14,6 @@ get_header(); ?>
     get_template_part('templates/article', 'single');
   endwhile; ?>
   </div>
-  <?php get_sidebar(); ?>
 </div>
 
 <?php get_footer();
