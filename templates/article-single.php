@@ -29,7 +29,7 @@ if (has_post_thumbnail()):
   <article id="article-<?php the_ID(); ?>" class="single_article has-thumb">
     <div class="single_article-header article_header">
       <div class="single_article-thumbnail article_thumbnail">
-        <?php the_post_thumbnail('single'); // thumbnail size shall be added ?>
+        <?php the_post_thumbnail(); // thumbnail size shall be added ?>
       </div>
 <?php else:
 // Single post content without thubmnail ?>
@@ -46,15 +46,19 @@ if (has_post_thumbnail()):
           <span><?php echo $post_object->labels->menu_name; ?></span>
           </h4>
         </div>
-        <h1 class="single_article-title"><?php the_title(); ?></h1>
-        <div class="single_article-date"> <?php the_date('d F Y'); ?></div>
+        <h1 class="single_article-title"><span><?php the_title(); ?></span></h1>
+        <div class="single_article-date"><span><?php echo _e('Published in ', 'moran'); the_date('d F Y'); ?></span></div>
       </div>
     </div><!-- end of article header -->
     <div class="single_article-body article_body">
       <div class="article_body-main"><?php the_content();?></div>
-      <div class="article_body-secondary"></div>
+      <div class="article_body-secondary">
+
+      </div>
     </div><!-- end of article body -->
     <div class="single_article-footer article_footer">
+      <div class="row">
+
       <?php if ($document): ?>
 	    <div class="article_footer-widget article_widget widget_download">
 	       <div class="widget_download-icon widget_item">
@@ -101,6 +105,7 @@ if (has_post_thumbnail()):
   	    </div>
 	     </div>
 
+     </div>
      </div>
 
    </article>

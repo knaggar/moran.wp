@@ -24,6 +24,7 @@ get_header(); ?>
       </h1>
     <?php if (have_posts()): ?>
       <ul class="category_filter">
+        <span class="filter-title"><?php echo _e('Filter Categories By:', 'moran'); ?></span>
         <?php foreach ($post_types as $post_type): ?>
           <li>
             <a href="#" data-filter="<?php echo $post_type->name ?>">

@@ -10,7 +10,7 @@
 */
 ?>
 
-<article id="article-<?php the_ID(); echo ?>" class="page_article">
+<article id="article-<?php the_ID();?>" class="page_article">
   <div class="page_article-header article_header">
     <div class="single_article-text article_text">
       <h1 class="page_article-title article_title">

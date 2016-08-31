@@ -33,7 +33,7 @@ img {max-width:100%;height:auto;vertical-align:middle;}
 ul, li {list-style:none}
 ol li {list-style: inherit}
 table, td {width:auto}
-table {margin:1.5em 0;font-size:inherit;max-width:100%;border-collapse:collapse;border-spacing:0;}
+table {margin:1.5em 0;font-size:inherit;max-width:100%;border-collapse:collapse;border-spacing:0;overflow-x:auto}
 article ul {list-style: inherit}
 article li {line-height: 1.8;}
 i {font-style:normal}

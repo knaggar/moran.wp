@@ -17,12 +17,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 html {font-size:87.5%;}
 body {font-family:'Open Sans', sans-serif;}
 h1, h2, h3, h4, h5, h6, a, li, form * {font-family:'Oswald', sans-serif}
-h1 {font-size:32px;font-size:2em}
-h2 {font-size:26px;font-size:1.625em}
-h3 {font-size:21px;font-size:1.313em}
-h4 {font-size:18px;font-size:1.125em}
-h5 {font-size:16px;font-size:1em}
-h6 {font-size:14px;font-size:0.875em}
+h1 {font-size:32px;font-size:2rem}
+h2 {font-size:26px;font-size:1.625rem}
+h3 {font-size:21px;font-size:1.313rem}
+h4 {font-size:18px;font-size:1.125rem}
+h5 {font-size:16px;font-size:1rem}
+h6 {font-size:14px;font-size:0.875rem}
 p {margin:0 0 1.75em; line-height:1.6em;}
 a {color:#101010}
 
@@ -107,10 +107,11 @@ html.is-overlay header {bottom:0}
 --------------*/
 article {transition:all .3s}
 .featured_title, .article_title {margin:0}
-.article_body p:first-child {font-weight:bold;font-size:1.2em}
+.featured_article-body p:first-child {font-weight:bold;font-size:1.2em}
 .btn_read-more {border:1px solid #b7b7b7;display:inline-block}
 .btn_read-more a {display: block;padding:3px 8px;font-weight:bold;}
 .btn_read-more:hover a {background:#1034a6;color:#fff!important}
+
 
 /*--------------
   ARTICLE / Featured
@@ -123,6 +124,79 @@ article {transition:all .3s}
 .featured_article:hover .featured_article-body:after {width:100%}
 .featured_article:hover .btn_read-more {border-color:#1034A6}
 
+/*--------------
+ARTICLE / Archive
+--------------*/
+.category_header {border-bottom:1px solid #d4d4d4}
+.category_title {color:#1034a6}
+.category_filter {display:flex;display:none}
+.filter-title {line-height: 2}
+.category_filter li {margin:0 5px}
+.category_filter a {border:1px solid transparent;color:#c3c3c3;padding:0 8px}
+.category_filter a:hover {color:#1034a6}
+.category_filter .selected {border-color:#1034A6;color:#1034A6}
+
+.body_main.grid {transition: all .3s;position:relative }
+
+.category_article {float:left;position:relative;margin:10px;overflow: hidden;}
+.category_article.external {display:table;text-align:center}
+.category_article:not(.external):hover {background:#1034a6}
+.category_article:before, .category_article:after {content:"";height:8px;position:absolute;bottom:0;left:0;transition:width .3s}
+.category_article:before {width: 100%;background:#404040;z-index:70}
+.category_article:after {width:0;background:#3a56ae;z-index:80}
+.category_article:hover:after {width:100%}
+
+.category_article a {color:#404040}
+.category_article:hover a {color:#fff}
+.category_article.external:hover a {color:#1034a6}
+
+
+.category_article-thumbnail {display:block;position:relative;}
+.category_article-thumbnail:after, .single_article-thumbnail:after {content: "";height:100%;width:100%;background:transparent;z-index:100;position:absolute;top:0;transition:background-color .3s;right:0}
+.category_article:hover .category_article-thumbnail:after{background:rgba(159, 159, 159, 0.2)}
+.category_article-thumbnail img, .single_article-thumbnail {filter:grayscale(100%);-webkit-filter:grayscale(100%);z-index:99;/*position:absolute;right:0;left:0;top:0;bottom:0;margin:auto*/}
+
+.category_article-text {padding:15px;height:auto}
+.category_article.external .category_article-text {display:table-cell;vertical-align: middle}
+.category_article-body {font-size:81.25%;color:#9f9f9f}
+.category_article-icon {font-size:2rem}
+
+/*--------------
+  ARTICLE / Single
+--------------*/
+.single_article-header, .single_article-body, .single_article-footer {margin-bottom:2.75em;padding-bottom:.75em}
+
+.single_article-header {position: relative}
+.single_article-text {right:0;top:0;z-index: 99;padding:2%}
+.single_article-thumbnail {position:relative;}
+.single_article-thumbnail:after {background:rgba(159, 159, 159, 0.2)}
+.single_article-text span {background:#fff;padding:5px 10px}
+
+
+.single_article-category h4 {display:inline-block;margin-right:-4px;font-weight: normal}
+.single_article-category a {background:#1034a6;display: block;color:#fff;padding:5px 10px}
+.single_article-category a:hover {background:#3a56ae}
+.article_category-0 span {padding:0}
+.single_article-title {margin-left:10px}
+.single_article-title span {box-shadow:10px 0 0 0 #fff, -10px 0 0 #fff }
+
+.single_article-body {padding:0 5%}
+.single_article table {font-size:0.875em;border:2px solid;}
+.single_article thead,.single_article tr:first-of-type {background:#101010;color:#fff;font-weight:bold}
+.single_article td {border:1px solid;text-align:center;}
+
+.single_article .endnote {display: inline-block;width:20px;height:20px;text-align: center}
+.single_article .endnote a {background:#101010;color:#fff;display:block;line-height: 20px;font-weight:bold}
+.single_article .endnote a:hover {background:#3a56ae}
+.article_body-secondary h3 {border-bottom:1px solid;color:#404040;margin-bottom:.75em}
+.article_body-secondary ol {column-count: 2;font-size:.75em}
+.article_body-secondary li {margin:0 1.25em 0.875em 0}
+.article_body-secondary span {font-size:1.2em}
+
+.single_article-footer {border-top:1px solid;}
+.article_widget {width:50%;text-align: center;float:left;padding:1em}
+.article_widget [class$="-icon widget_item"] {font-size:3rem}
+.article_widget.widget_tags {text-align: left}
 /*--------------
   FOOTER
 --------------*/

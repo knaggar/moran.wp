@@ -61,12 +61,15 @@ add_action('after_setup_theme', 'moran_setup');
     wp_register_style('responsive', get_template_directory_uri(). '/assets/styles/responsive.css','', filemtime(get_stylesheet_directory(). '/assets/styles/responsive.css'));
     wp_enqueue_style('responsive');
     /* Scripts */
-    // imagesLoaded
-    wp_register_script('imagesLoaded', get_template_directory_uri(). '/assets/scripts/imagesloaded.pkgd.min.js' );
-    wp_enqueue_script('imagesLoaded');
     // isotope
     wp_register_script('isotope', get_template_directory_uri(). '/assets/scripts/isotope.pkgd.min.js' );
     wp_enqueue_script('isotope');
+    // imagesLoaded
+    wp_register_script('imagesLoaded', get_template_directory_uri(). '/assets/scripts/imagesloaded.pkgd.min.js' );
+    wp_enqueue_script('imagesLoaded');
+    // Packery mode
+    wp_register_script('packery-mode', get_template_directory_uri(). '/assets/scripts/packery-mode.pkgd.min.js' );
+    wp_enqueue_script('packery-mode');
     // GLOBE.js
     wp_register_script('theme-js', get_template_directory_uri(). '/assets/scripts/globe.js', '', filemtime(get_stylesheet_directory(). '/assets/scripts/globe.js'),true );
     wp_enqueue_script('theme-js');

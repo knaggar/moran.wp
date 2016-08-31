@@ -15,7 +15,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 BODY
 --------------*/
 body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
-h1, h2, h3, h4, h5, h6, a, li, form * {font-family:'Droid Arabic Kufi', sans-serif}
+.rtl h1,.rtl h2, .rtl h3, .rtl  h4, .rtl h5, .rtl h6,.rtl  a,.rtl  li,.rtl form * {font-family:'Droid Arabic Kufi', sans-serif}
 
 /*-------------
   Additional Selectors
@@ -33,9 +33,23 @@ h1, h2, h3, h4, h5, h6, a, li, form * {font-family:'Droid Arabic Kufi', sans-ser
   ARTICLE / Featured
 --------------*/
 .rtl .featured_article-body:after {right:0;left:inherit}
+
+/*--------------
+  ARTICLE / Archive
+--------------*/
+.rtl .category_article {float:right}
+.rtl .category_article:before, .rtl .category_article:after {right:0;left:inherit}
+
+/*--------------
+  ARTICLE / Single
+--------------*/
+.rtl .single_article-text {left:0;right:inherit}
+.rtl .single_article-title {margin-right:10px;margin-left:inherit}
+.rtl .article_widget {float:right}
+.rtl .article_widget.widget_tags {text-align:right}
+.rtl .widget_download-info {direction:ltr}
 /*--------------
   FOOTER
 --------------*/
 .rtl .widget_menu {text-align:left}
-.rtl .widget_container, .rtl .footer_widget.widget_credit {border-right:8px solid;border-left:none}
-.rtl .widget_about {border-left:8px solid!important;border-right:none!important}
+.rtl .widget_about {border-left:8px solid!important; border-right:none!important}
