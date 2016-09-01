@@ -49,6 +49,14 @@ body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
 .rtl .article_widget.widget_tags {text-align:right}
 .rtl .widget_download-info {direction:ltr}
 .rtl .widget_tags-list li {float:right}
+
+/*--------------
+  SIDEBAR
+--------------*/
+.rtl .option-ctrl {float:left}
+.rtl .option-ctrl a {margin-right:5px;margin-left:0}
+.rtl .share_ctrl li {float:left}
+
 /*--------------
   FOOTER
 --------------*/

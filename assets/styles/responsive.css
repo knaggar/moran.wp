@@ -54,6 +54,7 @@ html {font-size:100%}
 .has-thumb .single_article-text {position:absolute;max-width:40%}
 .single_article-footer .row{display: flex}
 /*.article_widget {width:25%;}*/
+.sidebar_container {/*position:fixed;*/right:0}
 
 /*--------------
   FOOTER

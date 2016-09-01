@@ -73,27 +73,16 @@ if (has_post_thumbnail()):
             </h6>
           </div>
       </div>
-      <?php endif;
-      if(is_array($post_tags)) :?>
-
-      <div class="article_footer-widget article_widget widget_tags">
-           <h6 class="widget_tags-title widget_item">
-             <?php echo _e('Tags', 'moran'); ?>
-           </h6>
-           <ul class="widget_tags-list widget_item">
-            <?php foreach ($post_tags as $post_tag): ?>
-            <li><?php echo $post_tag->name; ?></li>
-            <?php endforeach; ?>
-           </ul>
-	    </div>
       <?php endif; ?>
+
+
 
 	    <div class="article_footer-widget article_widget widget-modified">
 	      <div class="widget_modified-icon widget_item">
 	         <i class="fa fa-calendar-check-o"></i>
 	      </div>
   	    <h6 class="widget_modified-title widget_item">
-          <?php echo _e('Last reviewed in ' , 'moran'); the_modified_date('d F Y'); ?>
+          <?php echo _e('Last reviewed in <br />' , 'moran'); the_modified_date('d F Y'); ?>
         </h6>
   	  </div>
       <div class="article_footer-widget article_widget widget-share">
@@ -104,7 +93,19 @@ if (has_post_thumbnail()):
           <?php social_share(); ?>
   	    </div>
 	     </div>
+       <?php if(is_array($post_tags)) :?>
 
+       <div class="article_footer-widget article_widget widget_tags">
+            <h6 class="widget_tags-title widget_item">
+              <?php echo _e('Tags', 'moran'); ?>
+            </h6>
+            <ul class="widget_tags-list widget_item">
+             <?php foreach ($post_tags as $post_tag): ?>
+             <li><?php echo $post_tag->name; ?></li>
+             <?php endforeach; ?>
+            </ul>
+ 	    </div>
+       <?php endif; ?>
      </div>
      </div>
 

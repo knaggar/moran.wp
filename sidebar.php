@@ -13,24 +13,25 @@ $document_title = get_the_title($document);
 $document_size  = filesize(get_attached_file($document));
 $document_size  = size_format($document_size,2 );
 $document_info  = pathinfo(get_attached_file($document));
-$document_icon = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // use to change file icon based on extension
+$document_icons = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // use to change file icon based on extension
 
 ?>
-<div class="sidebar_container sidebar">
+<div class="col">
+  <div class="sidebar_container sidebar">
     <!--?php if(toc_get_index()): ?-->
-    <div class="sidebar_toc sidebar-header">
-      <div class="toc_header">
-        <div class="toc_show-hide header-item inline">
+    <div class="sidebar_toc">
+      <div class="toc_header sidebar-header">
+        <div class="toc_show-hide inline">
           <div class="show-hide_btn ctrl-btn">
-            <span class="btn_toc">
-              <i class="fa fa-file-text"></i>
-            </span>
             <span class="btn_close">
               <i class="fa fa-close"></i>
             </span>
+            <span class="btn_toc">
+              <i class="fa fa-file-text"></i>
+            </span>
           </div>
         </div>
-        <h5 class="toc_title header-item inline">
+        <h5 class="toc_title sidebar-title inline">
           <?php echo _e('Contents', 'moran'); ?>
         </h5>
       </div>
@@ -40,17 +41,17 @@ $document_icon = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // us
         </ul>
       </div>
     </div>
-  <!--?php endif; ?-->
+    <!--?php endif; ?-->
     <div class="sidebar_options">
       <div class="option_header sidebar-header">
-        <div class="options-hide header-item inline">
+        <div class="options-hide inline">
           <div class="show-hide_btn ctrl-btn">
             <span class="btn_toc">
               <i class="fa fa-cog"></i>
             </span>
           </div>
         </div>
-        <h5 class="options_title header-item inline">
+        <h5 class="options_title sidebar-title inline">
           <?php echo _e('Reading options', 'moran'); ?>
         </h5>
       </div>
@@ -83,20 +84,21 @@ $document_icon = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // us
             </span>
           </li>
           <?php if($document): ?>
-          <li class="option_download list_item">
-            <span class="download_title option-title">
-              <?php echo _e('Download', 'moran'); ?>
-            </span>
-            <span class="download_info option-info">
-              <?php echo $document_size . '(.' . $document_info['extension'] . ')' ;?>
-            </span>
-            <span class="download_ctrl option-ctrl">
-              <a href="<?php echo $document_url ?>" alt="<?php echo $document_title ?>"><i class="fa fa-file-word-o"></i></a>
-            </span>
-          </li>
-        <?php endif; ?>
+            <li class="option_download list_item">
+              <span class="download_title option-title">
+                <?php echo _e('Download', 'moran'); ?>
+              </span>
+              <span class="download_ctrl option-ctrl">
+                <span class="download_info option-info">
+                  <?php echo $document_size . '(.' . $document_info['extension'] . ')' ;?>
+                </span>
+                <a href="<?php echo $document_url ?>" alt="<?php echo $document_title ?>"><i class="fa fa-file-word-o"></i></a>
+              </span>
+            </li>
+          <?php endif; ?>
         </ul>
       </div>
     </div>
 
+  </div>
 </div>

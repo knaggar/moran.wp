@@ -36,7 +36,7 @@ a {color:#101010}
 .widget_container {display: flex;align-items: center}
 .sidebar_container {}
 .row {width:100%;position:relative}
-.row:after {content:"";display:table;clear:both}
+.row:after, .sidebar-header:after {content:"";display:table;clear:both}
 .col-overlay {width:46%;margin:0 2%}
 /*-------------
   Modifiers
@@ -95,8 +95,8 @@ html.is-overlay header {bottom:0}
 .social-profile li {margin:0 5px}
 .social-profile a {display:block;}
 
-.social-profile .facebook a:hover {color:#3b5998}
-.social-profile .twitter a:hover {color:#00aced}
+.social-profile .facebook a:hover, .social-share .facebook a:hover {color:#3b5998}
+.social-profile .twitter a:hover, .social-share .twitter a:hover {color:#00aced}
 .overlay_full-about {font-size:1.5vmax;}
 .overlay_full-credit {font-size:1.35vmax}
 .widget_credit-icon {font-size:2em}
@@ -202,8 +202,21 @@ ARTICLE / Archive
 .widget_download-action a:hover {box-shadow:inset 3em 3em 0 rgba(255,255,255,0.2);}
 .widget_tags-list li {background:#f1f1f1;padding:0 5px;font-size:81.75%;float:left;margin:0 0 10px 5px}
 .widget_share-action li, .share_ctrl li{display: inline-block;margin:0 10px}
-
-.show-hide_btn {background:#101010}
+/*--------------
+  SIDEBAR
+--------------*/
+.sidebar-header {background:#3a56ae}
+.sidebar-title {line-height:55px;margin:0 8px;color:#fff}
+.show-hide_btn {background:#7085ca}
+.sidebar-body {background:#405db8;color:#fff}
+.sidebar-body li {border-bottom:1px solid #fff;padding:10px;font-size:.875rem}
+.sidebar-body li:last-of-type {border:none}
+.sidebar-body li:hover {background:#2e4899}
+.sidebar-body a {color:#f1f1f1}
+.option-ctrl {float:right}
+.option-ctrl a {margin-left:5px;font-size:1.2em}
+.option-ctrl a:hover, .option-ctrl a.selected {color:#a0a5aa!important}
+.share_ctrl li {border:none;padding:0;margin:0;display:block;float:right}
 /*--------------
   FOOTER
 --------------*/

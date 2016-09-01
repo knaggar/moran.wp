@@ -3,16 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-01 09:10+0000\n"
+"POT-Creation-Date: 2016-08-24 21:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
 "Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco - https://localise.biz/"
+"X-Generator: Loco https://localise.biz/"
 
 #. Name of the template
 msgid "page template"
@@ -24,34 +24,6 @@ msgstr ""
 
 #. Name of the template
 msgid "Single template"
-msgstr ""
-
-#. Name of the template
-msgid "Sidebar template"
-msgstr ""
-
-#: sidebar.php:35
-msgid "Contents"
-msgstr ""
-
-#: sidebar.php:55
-msgid "Reading options"
-msgstr ""
-
-#: sidebar.php:62
-msgid "Reading mode"
-msgstr ""
-
-#: sidebar.php:70
-msgid "Font size"
-msgstr ""
-
-#: sidebar.php:80 templates/article-single.php:90
-msgid "Share"
-msgstr ""
-
-#: sidebar.php:89 templates/article-single.php:72
-msgid "Download"
 msgstr ""
 
 #: functions.php:26
@@ -78,11 +50,7 @@ msgstr ""
 msgid "Archive template"
 msgstr ""
 
-#: archive.php:27
-msgid "Filter Categories By:"
-msgstr ""
-
-#: archive.php:37
+#: archive.php:36
 msgid "Show all"
 msgstr ""
 
@@ -90,16 +58,20 @@ msgstr ""
 msgid "single article template"
 msgstr ""
 
-#: templates/article-single.php:50
-msgid "Published in "
+#: templates/article-single.php:68
+msgid "Download"
 msgstr ""
 
-#: templates/article-single.php:85
-msgid "Last reviewed in <br />"
-msgstr ""
-
-#: templates/article-single.php:100
+#: templates/article-single.php:77
 msgid "Tags"
+msgstr ""
+
+#: templates/article-single.php:92
+msgid "Last reviewed in "
+msgstr ""
+
+#: templates/article-single.php:97
+msgid "Share"
 msgstr ""
 
 #. Name of the template
@@ -148,11 +120,11 @@ msgid ""
 "<br /> This work is provided under a Creative Commons License"
 msgstr ""
 
-#: includes/wp_social-service.php:21
+#: includes/wp_social-service.php:20
 msgid "Share on Facebook"
 msgstr ""
 
-#: includes/wp_social-service.php:26
+#: includes/wp_social-service.php:25
 msgid "Tweet this"
 msgstr ""
 
@@ -389,7 +361,7 @@ msgid "this theme is develeoped for marsadomran.info website."
 msgstr ""
 
 #. URI of the theme
-msgid "https://github.com/kaeid/moran.wp"
+msgid "https://github.com/kaeid/moran"
 msgstr ""
 
 #. Author of the theme

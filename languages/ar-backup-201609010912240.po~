@@ -1,0 +1,378 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: moran\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-24 21:05+0000\n"
+"PO-Revision-Date: 2016-09-01 11:05+0200\n"
+"Last-Translator: dev <go@kareematif.me>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100 >= 3 "
+"&& n%100<=10 ? 3 : n%100 >= 11 && n%100<=99 ? 4 : 5;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. Name of the template
+msgid "page template"
+msgstr ""
+
+#. Name of the template
+msgid "Header template"
+msgstr ""
+
+#. Name of the template
+msgid "Single template"
+msgstr ""
+
+#: functions.php:26
+msgid "Primary Naviation"
+msgstr ""
+
+#: functions.php:27
+msgid "Category Navigation"
+msgstr ""
+
+#. Name of the template
+msgid "Main template"
+msgstr ""
+
+#: index.php:16
+msgid "Chosen Article"
+msgstr "مقالة مختارة"
+
+#. Name of the template
+msgid "Footer template"
+msgstr ""
+
+#. Name of the template
+msgid "Archive template"
+msgstr ""
+
+#: archive.php:36
+msgid "Show all"
+msgstr "إظهار الكل"
+
+#. Name of the template
+msgid "single article template"
+msgstr ""
+
+#: templates/article-single.php:68
+msgid "Download"
+msgstr "تحميل"
+
+#: templates/article-single.php:77
+msgid "Tags"
+msgstr "وسوم"
+
+#: templates/article-single.php:92
+msgid "Last reviewed in "
+msgstr "تم مراجعتها في"
+
+#: templates/article-single.php:97
+msgid "Share"
+msgstr "شارك"
+
+#. Name of the template
+msgid "article template"
+msgstr ""
+
+#. Name of the template
+msgid "Empty Archive template"
+msgstr ""
+
+#: templates/article-empty.php:22
+#, c-format
+msgid "Your search for %s return 0 results"
+msgstr ""
+
+#: templates/article-empty.php:23
+#, c-format
+msgid "Try %s again"
+msgstr ""
+
+#: templates/article-empty.php:26
+msgid "There is no content here, please try again later"
+msgstr "لا يوجد محتوى، برجاء محاولة مرة أخرى"
+
+#. Name of the template
+msgid "Overlay template"
+msgstr ""
+
+#. Name of the template
+msgid "feature article template"
+msgstr ""
+
+#: templates/article-featured.php:42
+msgid "Read more"
+msgstr "اقرأ المزيد"
+
+#. Name of the template
+msgid "Page template"
+msgstr ""
+
+#. Name of the template
+msgid "credit template"
+msgstr ""
+
+#: templates/footer-credit.php:13
+#, c-format
+msgid ""
+"except for <a href=\"%s\">theme design & develop</a>, or mentioned elsewhere,"
+"<br /> This work is provided under a Creative Commons License"
+msgstr ""
+"فيما عدا <a href=\"%s\"> تصميم وتطوير القالب</a>، أو ما يتم الإشارة له،>br /"
+"> فإن هذا العمل تحت رخصة المشاع الإبداعي"
+
+#: includes/wp_social-service.php:20
+msgid "Share on Facebook"
+msgstr "شارك على فيسبوك"
+
+#: includes/wp_social-service.php:25
+msgid "Tweet this"
+msgstr "غرد"
+
+#: includes/wp_custom-taxonomy.php:15
+msgctxt "Taxonomy General Name"
+msgid "Urban Categories"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:16
+msgctxt "Taxonomy Singular Name"
+msgid "Urban Category"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:17
+msgid "Category"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:18
+msgid "All Items"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:19
+msgid "Parent Item"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:20
+msgid "Parent Item:"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:21
+msgid "New Item Name"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:22
+msgid "Add New Item"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:23
+msgid "Edit Item"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:24
+msgid "Update Item"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:25
+msgid "View Item"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:26
+msgid "Separate items with commas"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:27
+msgid "Add or remove items"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:28
+msgid "Choose from the most used"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:29
+msgid "Popular Items"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:30
+msgid "Search Items"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:31
+msgid "Not Found"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:32
+msgid "No items"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:33
+msgid "Items list"
+msgstr ""
+
+#: includes/wp_custom-taxonomy.php:34
+msgid "Items list navigation"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:14
+msgctxt "General Name"
+msgid "Policy Analysis Articles"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:15
+msgctxt "Singular Name"
+msgid "Policy Analysis Article"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:16 includes/wp_custom-post-type.php:30
+msgid "Policy Analysis"
+msgstr "تحليل سياسات"
+
+#: includes/wp_custom-post-type.php:17
+msgid "All Policy Analysis Articles"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:18 includes/wp_custom-post-type.php:59
+#: includes/wp_custom-post-type.php:100 includes/wp_custom-post-type.php:141
+msgid "Add New"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:19 includes/wp_custom-post-type.php:60
+#: includes/wp_custom-post-type.php:101 includes/wp_custom-post-type.php:142
+msgid "Add New Article"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:20 includes/wp_custom-post-type.php:61
+#: includes/wp_custom-post-type.php:102 includes/wp_custom-post-type.php:143
+msgid "Edit"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:21 includes/wp_custom-post-type.php:62
+#: includes/wp_custom-post-type.php:103 includes/wp_custom-post-type.php:144
+msgid "Edit Article"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:22 includes/wp_custom-post-type.php:63
+#: includes/wp_custom-post-type.php:104 includes/wp_custom-post-type.php:145
+msgid "New Article"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:23 includes/wp_custom-post-type.php:64
+#: includes/wp_custom-post-type.php:105 includes/wp_custom-post-type.php:146
+msgid "View"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:24 includes/wp_custom-post-type.php:65
+#: includes/wp_custom-post-type.php:106 includes/wp_custom-post-type.php:147
+msgid "View Article"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:25 includes/wp_custom-post-type.php:66
+#: includes/wp_custom-post-type.php:107 includes/wp_custom-post-type.php:148
+msgid "Search Articles"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:26 includes/wp_custom-post-type.php:67
+#: includes/wp_custom-post-type.php:108 includes/wp_custom-post-type.php:149
+msgid "No Articles found"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:27 includes/wp_custom-post-type.php:68
+#: includes/wp_custom-post-type.php:109 includes/wp_custom-post-type.php:150
+msgid "No Articles found in Trash"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:32
+msgid "Analysis of policy about urbans"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:55
+msgctxt "General Name"
+msgid "Facts & Budgets Articles"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:56
+msgctxt "Singular Name"
+msgid "Facts & Budgets Article"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:57 includes/wp_custom-post-type.php:71
+msgid "Facts & Budgets"
+msgstr "حقائق وميزانيات"
+
+#: includes/wp_custom-post-type.php:58
+msgid "All Facts & Budgets Articles"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:73
+msgid "Fact and Budgets about urbans"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:96
+msgctxt "General Name"
+msgid "Research Articles"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:97
+msgctxt "Singular Name"
+msgid "Research Article"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:98 includes/wp_custom-post-type.php:112
+msgid "Research"
+msgstr "أبحاث ومقالات"
+
+#: includes/wp_custom-post-type.php:99
+msgid "All Research Articles"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:114
+msgid "Research Papers about urbans"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:137
+msgctxt "General Name"
+msgid "Urban Archive Articles"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:138
+msgctxt "Singular Name"
+msgid "Urban Archive Article"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:139 includes/wp_custom-post-type.php:153
+msgid "Urban Archive"
+msgstr "أرشيف العمران"
+
+#: includes/wp_custom-post-type.php:140
+msgid "All Urban Archive Articles"
+msgstr ""
+
+#: includes/wp_custom-post-type.php:155
+msgid "Archive about urbans"
+msgstr ""
+
+#: includes/wp_customizer.php:14 includes/wp_customizer.php:21
+msgid "Logo"
+msgstr ""
+
+#. Name of the theme
+msgid "moran"
+msgstr ""
+
+#. Description of the theme
+msgid "this theme is develeoped for marsadomran.info website."
+msgstr ""
+
+#. URI of the theme
+msgid "https://github.com/kaeid/moran"
+msgstr ""
+
+#. Author of the theme
+msgid "Kareem A. Eid"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://kaeid.io"
+msgstr ""
