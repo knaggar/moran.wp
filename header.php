@@ -21,7 +21,7 @@
   <div class="site_container">
   <header>
 <div class="header-row row">
-    <?php if(is_singular()): ?>
+  <?php if(is_singular() && toc_get_index()): ?>
     <div class="header_sidebar-control control-toc">
       <div class="toc_show-hide">
         <div class="show-hide_btn ctrl-btn">
@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <?php endif; ?>
+  <?php endif; ?>
     <div class="header_branding">
       <div class="branding_switch header-item inline">
         <div class="switch_btn ctrl-btn">

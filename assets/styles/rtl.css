@@ -62,11 +62,13 @@ body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
 /*--------------
   SIDEBAR
 --------------*/
+.rtl [class^="sidebar_"] {left:0;right:inherit}
+.rtl .sidebar_toc {right:0}
+
 .rtl .options_header  {text-align: right}
 .rtl .option-ctrl {float:left}
 .rtl .option-ctrl a {margin-right:5px;margin-left:0}
 .rtl .share_ctrl li {float:left}
-
 /*--------------
   FOOTER
 --------------*/
@@ -78,7 +80,8 @@ body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
 @media only screen and (min-width:769px){
   .rtl.has-sidebar .main_container {margin:135px 20% 60px 10%}
   .rtl .col-widget {float:right}
-  .rtl .sidebar_toc {left:inherit;}
+  
+  .rtl.hidden-sidebar .sidebar_toc {margin-right:-100%;margin-left:inherit}
   .rtl .footer_widget.widget_credit {float:left}
   .rtl .widget_container, .rtl .footer_widget.widget_credit {border-right:8px solid;border-left:none}
 }

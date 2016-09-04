@@ -96,10 +96,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   });
   $endnotes = $endnotes.text().replace(/[\[\]']+/g, '');
   // Show/hide table of content
-  sidebarToc = $('.sidebar_toc');
+  if ($('.has-sidebar .toc_show-hide .btn_close').css('marginTop') == '-35px'){
+    $('body').toggleClass('has-sidebar hidden-sidebar');
+  }
   $('.toc_show-hide span').click(function(){
     $('body').toggleClass('has-sidebar hidden-sidebar');
-    // if ($this)
+    $(this).parents('.toc_show-hide').toggleClass('toc_close');
   });
   // Article reading options
     // Show/hide options

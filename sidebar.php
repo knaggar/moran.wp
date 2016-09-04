@@ -17,7 +17,7 @@ $document_icons = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // u
 
 ?>
   <div class="article_sidebar sidebar">
-    <!--?php if(toc_get_index()): ?-->
+    <?php if(toc_get_index()): ?>
     <div class="sidebar_toc">
       <div class="toc_header sidebar-header">
         <h5 class="toc_title sidebar-title inline">
@@ -30,7 +30,7 @@ $document_icons = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // u
         </ul>
       </div>
     </div>
-    <!--?php endif; ?-->
+    <?php endif; ?>
     <div class="sidebar_options">
       <div class="option_header sidebar-header">
         <h5 class="options_title sidebar-title">

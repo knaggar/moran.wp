@@ -24,7 +24,6 @@
   // Endnotes fields
   $group = 185;
   $group_fields = acf_get_fields_by_id($group);
-
 if (has_post_thumbnail()):
 // Single post contents with post thumbnail
 ?>
@@ -41,7 +40,7 @@ if (has_post_thumbnail()):
 <?php endif; ?>
 
       <div class="single_article-text article_text">
-        <div class="single_article-category">
+        <div class="single_article-category article_text-item">
           <h4 class="single_article-category article_category-0">
           <?php echo get_the_term_list($post->ID, 'urban_categories', '<span>', '</span>'); ?>
           </h4>
@@ -49,8 +48,13 @@ if (has_post_thumbnail()):
           <span><?php echo $post_object->labels->menu_name; ?></span>
           </h4>
         </div>
-        <h1 class="single_article-title"><span><?php the_title(); ?></span></h1>
-        <div class="single_article-date"><span><?php echo _e('Published in ', 'moran'); the_date('d F Y'); ?></span></div>
+        <h1 class="single_article-title article_text-item"><span><?php the_title(); ?></span></h1>
+        <h6 class="single_article-date article_text-item"><span><?php echo _e('Published in ', 'moran'); the_date('d F Y'); ?></span></h6>
+        <h5 class="single_article-author article_text-item">
+
+            <span><?php the_field('authored_by'); ?></span>
+
+        </h5>
       </div>
     </div><!-- end of article header -->
     <div class="single_article-body article_body">
@@ -82,16 +86,15 @@ if (has_post_thumbnail()):
           </div>
       </div>
       <?php endif; ?>
-
-
-
 	    <div class="article_footer-widget article_widget widget-modified">
 	      <div class="widget_modified-icon widget_item">
 	         <i class="fa fa-calendar-check-o"></i>
 	      </div>
-  	    <h6 class="widget_modified-title widget_item">
-          <?php echo _e('Last reviewed in <br />' , 'moran'); the_modified_date('d F Y'); ?>
-        </h6>
+  	    <div class="widget_modified-title widget_item">
+          <h6>
+            <?php echo _e('Last reviewed in <br />' , 'moran'); the_modified_date('d F Y'); ?>
+          </h6>
+        </div>
   	  </div>
       <div class="article_footer-widget article_widget widget-share">
         <div class="widget_share-title widget_item">

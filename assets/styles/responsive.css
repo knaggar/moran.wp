@@ -31,13 +31,14 @@ html {font-size:100%}
 .logged-in header{top: 32px}
 header [class^="header_"]:not(.header_callables) {padding:.85em 1em}
 .hidden-sidebar .header_branding, .has-sidebar .header_branding {width:calc(65% - 55px - 2em)}
-.hidden-sidebar .header_navigation, .has-sidebar .header_navigation {width:calc(35% - 55px - 2em)}
+.hidden-sidebar .header_navigation, .single .header_navigation {width:calc(35% - 55px - 2em)}
 .branding_site .logo {max-width:182px}
 .ctrl-btn {width:55px;height:55px;line-height: 55px}
 .home .btn_cat-menu {margin-top:-55px}
 .btn_cat-menu {margin-top:0}
 .home .header_categories {/*display:block;/* remove at the end */display: none}
 
+.toc_show-hide .btn_close {margin:0}
 .hidden-sidebar .toc_show-hide .btn_close {margin-top:-55px}
 
 /*--------------
@@ -57,7 +58,7 @@ header [class^="header_"]:not(.header_callables) {padding:.85em 1em}
   ARTICLE / Single
 --------------*/
 .single_article-thumbnail {max-width:75%;max-height:415px;overflow: hidden}
-.has-thumb .single_article-text {position:absolute;max-width:40%}
+.has-thumb .single_article-text {position:absolute;max-width:50%}
 .single_article-footer .row{display: flex}
 /*.article_widget {width:25%;}*/
 
@@ -68,10 +69,9 @@ header [class^="header_"]:not(.header_callables) {padding:.85em 1em}
 --------------*/
 [class^="sidebar_"] {top:calc(55px + 1.7em)}
 .sidebar_toc {width:18%;height:100%;display:block;margin:0}
-.hidden-sidebar .sidebar_toc {margin-right:-100%}
+.hidden-sidebar .sidebar_toc {margin-top:0;margin-left:-100%}
 .sidebar_options {width:15%}
 .sidebar-title {line-height:55px}
-.toc_show-hide .btn_close {margin:0}
 
 /*--------------
   FOOTER

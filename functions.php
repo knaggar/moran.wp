@@ -88,7 +88,7 @@ add_filter('pll_flag_title', 'my_flag_title', 10, 2);
 function body_classes($classes){
   if ( isset($classes['blog'] )) {
     unset( $classes['blog'] );
-  }elseif(is_singular()){
+  }elseif(is_singular() && toc_get_index()){
     $classes[] = 'has-sidebar';
   }
   return $classes;
