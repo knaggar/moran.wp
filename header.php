@@ -21,6 +21,20 @@
   <div class="site_container">
   <header>
 <div class="header-row row">
+    <?php if(is_singular()): ?>
+    <div class="header_sidebar-control control-toc">
+      <div class="toc_show-hide">
+        <div class="show-hide_btn ctrl-btn">
+          <span class="btn_close">
+            <i class="fa fa-close"></i>
+          </span>
+          <span class="btn_toc">
+            <i class="fa fa-file-text"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <?php endif; ?>
     <div class="header_branding">
       <div class="branding_switch header-item inline">
         <div class="switch_btn ctrl-btn">
@@ -71,6 +85,17 @@
         </div>
       </div>
     </div>
+    <?php if(is_singular()): ?>
+    <div class="header_sidebar-control control-options">
+      <div class="options_show-hide">
+        <div class="show-hide_btn ctrl-btn">
+          <span class="btn_toc">
+            <i class="fa fa-cog"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <?php endif; ?>
   </div>
     <div class="header_categories header_callables <?php if(!is_home()){ echo 'hidden'; } ?>">
       <?php // Show Category navigation
@@ -93,4 +118,3 @@
   <main>
     <div class="main_container container">
       <?php if (is_singular()) get_sidebar (); ?>
-      <div class="row">

@@ -16,21 +16,10 @@ $document_info  = pathinfo(get_attached_file($document));
 $document_icons = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // use to change file icon based on extension
 
 ?>
-<div class="col">
-  <div class="sidebar_container sidebar">
+  <div class="article_sidebar sidebar">
     <!--?php if(toc_get_index()): ?-->
     <div class="sidebar_toc">
       <div class="toc_header sidebar-header">
-        <div class="toc_show-hide inline">
-          <div class="show-hide_btn ctrl-btn">
-            <span class="btn_close">
-              <i class="fa fa-close"></i>
-            </span>
-            <span class="btn_toc">
-              <i class="fa fa-file-text"></i>
-            </span>
-          </div>
-        </div>
         <h5 class="toc_title sidebar-title inline">
           <?php echo _e('Contents', 'moran'); ?>
         </h5>
@@ -44,14 +33,7 @@ $document_icons = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // u
     <!--?php endif; ?-->
     <div class="sidebar_options">
       <div class="option_header sidebar-header">
-        <div class="options-hide inline">
-          <div class="show-hide_btn ctrl-btn">
-            <span class="btn_toc">
-              <i class="fa fa-cog"></i>
-            </span>
-          </div>
-        </div>
-        <h5 class="options_title sidebar-title inline">
+        <h5 class="options_title sidebar-title">
           <?php echo _e('Reading options', 'moran'); ?>
         </h5>
       </div>
@@ -69,7 +51,7 @@ $document_icons = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // u
             <span class="font-size_title option-title">
               <?php echo _e('Font size', 'moran'); ?>
             </span>
-            <span class="read-mode_ctrl option-ctrl">
+            <span class="font-size_ctrl option-ctrl">
               <a href="#" class="font-plus"><i class="fa fa-plus-square"></i></a>
               <a href="#" class="font-reset"><i class="fa fa-square"></i></a>
               <a href="#" class="font-minus"><i class="fa fa-minus-square"></i></a>
@@ -99,6 +81,9 @@ $document_icons = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // u
         </ul>
       </div>
     </div>
-
+  <div class="top_btn ctrl-btn">
+    <span class="btn_top">
+      <i class="fa fa-angle-up"></i>
+    </span>
   </div>
 </div>

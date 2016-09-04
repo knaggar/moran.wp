@@ -82,14 +82,75 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   // Clean post from attributes and elements (added by copying from Word)
     // Remove table width
     $('table, td').removeAttr('width');
-    // Remove empty paragraphs <p>
+    // Remove empty paragraphs from <p> and additional <u> and <strong> elements
+    $('article').find('u, strong').contents().unwrap();
     $('article p').each(function(){
       $this = $(this);
       if($this.html().replace(/\s|&nbsp;/g, '').length === 0)
       this.remove();
     });
-  // Deattach footnote and put in secondary body
-  $('.endnotes').appendTo('.article_body-secondary');
-
+  // Wrap endnotes with <sup> element
+  $endnotes = $('.single_article a[href^="#_edn"]');
+  $endnotes.each(function(){
+    $(this).wrap('<sup class="article_endnote" />');
+  });
+  $endnotes = $endnotes.text().replace(/[\[\]']+/g, '');
+  // Show/hide table of content
+  sidebarToc = $('.sidebar_toc');
+  $('.toc_show-hide span').click(function(){
+    $('body').toggleClass('has-sidebar hidden-sidebar');
+    // if ($this)
+  });
+  // Article reading options
+    // Show/hide options
+    sidebarOptions = $('.sidebar_options');
+    $('.options_show-hide span').click(function(e){
+      $(sidebarOptions).toggle();
+      e.stopPropagation();
+    });
+    $(window).click(function(){
+      $(sidebarOptions).hide();
+    });
+    // Dark mode
+		$('.read-mode_ctrl a').click(function(){
+			$('body').toggleClass('dark-mode_active');
+			$(this).toggleClass('selected');
+			return false;
+		});
+		// Increase/decrease/reset font size
+		$contentTarget = $('.single_article-body');
+		$currentSize = 1;
+		$('.font-plus').click(function(){
+			if($currentSize <= 1.5)
+				$contentTarget.css('zoom', $currentSize += 0.10);
+			return false;
+		});
+		$('.font-minus').click(function(){
+			if($currentSize >= 0.6)
+				$contentTarget.css('zoom', $currentSize -= 0.10);
+			return false;
+		});
+		$('.font-reset').click(function(){
+			$contentTarget.removeAttr('style');
+			return false;
+		});
+  // show button to scroll to top while clicking
+  previousScroll = 0;
+  $(window).scroll(function(){
+    $windowScroll = $(window).scrollTop();
+    if ($windowScroll > 0 && $windowScroll < $(document).height() - $(window).height()) {
+      if ($windowScroll > previousScroll){
+        $('.top_btn').slideUp();
+      } else if ($windowScroll < previousScroll ) {
+        $('.top_btn').slideDown();
+      }
+      previousScroll = $windowScroll;
+    } else {
+      $('.top_btn').slideToggle();
+    }
+  });
+  $('.btn_top').click(function(){
+    $('html, body').animate({scrollTop:0}, 'slow');
+  });
   });
 })(jQuery);

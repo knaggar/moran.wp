@@ -21,6 +21,9 @@
   $document_icon = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // use to change file icon based on extension
   // post tags (if any)
   $post_tags = get_the_tags();
+  // Endnotes fields
+  $group = 185;
+  $group_fields = acf_get_fields_by_id($group);
 
 if (has_post_thumbnail()):
 // Single post contents with post thumbnail
@@ -53,7 +56,12 @@ if (has_post_thumbnail()):
     <div class="single_article-body article_body">
       <div class="article_body-main"><?php the_content();?></div>
       <div class="article_body-secondary">
-
+        <?php if(get_field('endnotes_title') && get_field('endnotes_body')): ?>
+        <div class="article_endnotes">
+          <h3 class="endnotes_title"><?php the_field('endnotes_title') ;?></h3>
+          <div class="endnotes_body"><?php the_field('endnotes_body') ;?></div>
+        </div>
+        <?php endif; ?>
       </div>
     </div><!-- end of article body -->
     <div class="single_article-footer article_footer">
@@ -61,10 +69,10 @@ if (has_post_thumbnail()):
 
       <?php if ($document): ?>
 	    <div class="article_footer-widget article_widget widget_download">
-	       <div class="widget_download-icon widget_item">
+	       <div class="download_icon widget_download-icon widget_item">
            <i class="fa fa-file-word-o"></i><?php // change file icon based of extension ?>
          </div>
-	        <div class="widget_download-info widget_item">
+	        <div class="download_info widget_download-info widget_item">
             <?php echo $document_size . '(.' . $document_info['extension'] . ')' ;?>
           </div>
           <div class="widget_download-action widget_item">
@@ -87,7 +95,7 @@ if (has_post_thumbnail()):
   	  </div>
       <div class="article_footer-widget article_widget widget-share">
         <div class="widget_share-title widget_item">
-          <?php echo _e('Share', 'moran'); ?>
+          <h6><?php echo _e('Share', 'moran'); ?></h6>
   	    </div>
   	    <div class="widget_share-action widget_item">
           <?php social_share(); ?>

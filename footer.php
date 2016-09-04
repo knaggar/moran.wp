@@ -8,7 +8,6 @@
 */
 ?>
 </div>
-</div>
 </main>
 </div>
 <footer>
@@ -33,6 +32,9 @@
           </div>
         </div>
         <div class="widget_social-profiles footer_widget">
+          <h6 class="widget_profiles-title widget_item">
+            <?php echo _e('Contact Us', 'moran'); ?>
+          </h6>
           <div class="widget_profiles-action widget_item">
             <?php social_profile() ?>
           </div>

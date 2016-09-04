@@ -88,6 +88,8 @@ add_filter('pll_flag_title', 'my_flag_title', 10, 2);
 function body_classes($classes){
   if ( isset($classes['blog'] )) {
     unset( $classes['blog'] );
+  }elseif(is_singular()){
+    $classes[] = 'has-sidebar';
   }
   return $classes;
 }

@@ -22,12 +22,21 @@ body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
 --------------*/
 .rtl .inline {float:right}
 
+/*-------------
+  GRID
+--------------*/
+
 /*--------------
   HEADER
 --------------*/
 .rtl header [class^="header_"]:not(.header_callables) {float:right}
 .rtl .btn_lang a {font-family:'Oswald', sans-serif}
 .rtl .header_navigation .inline {float:left!important}
+
+/*--------------
+  MAIN
+--------------*/
+.rtl .top_btn {left:2%;right:inherit}
 
 /*--------------
   ARTICLE / Featured
@@ -47,12 +56,13 @@ body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
 .rtl .single_article-title {margin-right:10px;margin-left:inherit}
 .rtl .article_widget {float:right}
 .rtl .article_widget.widget_tags {text-align:right}
-.rtl .widget_download-info {direction:ltr}
+.rtl .download_info {direction:ltr}
 .rtl .widget_tags-list li {float:right}
 
 /*--------------
   SIDEBAR
 --------------*/
+.rtl .options_header  {text-align: right}
 .rtl .option-ctrl {float:left}
 .rtl .option-ctrl a {margin-right:5px;margin-left:0}
 .rtl .share_ctrl li {float:left}
@@ -62,3 +72,13 @@ body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
 --------------*/
 .rtl .widget_menu {text-align:left}
 .rtl .widget_about {border-left:8px solid!important; border-right:none!important}
+/* ---------------------------------------
+  For media more than 768xp width
+----------------------------------------*/
+@media only screen and (min-width:769px){
+  .rtl.has-sidebar .main_container {margin:135px 20% 60px 10%}
+  .rtl .col-widget {float:right}
+  .rtl .sidebar_toc {left:inherit;}
+  .rtl .footer_widget.widget_credit {float:left}
+  .rtl .widget_container, .rtl .footer_widget.widget_credit {border-right:8px solid;border-left:none}
+}
