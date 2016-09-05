@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-01 09:10+0000\n"
+"POT-Creation-Date: 2016-09-05 18:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -30,27 +30,27 @@ msgstr ""
 msgid "Sidebar template"
 msgstr ""
 
-#: sidebar.php:35
+#: sidebar.php:24
 msgid "Contents"
 msgstr ""
 
-#: sidebar.php:55
+#: sidebar.php:37
 msgid "Reading options"
 msgstr ""
 
-#: sidebar.php:62
+#: sidebar.php:44
 msgid "Reading mode"
 msgstr ""
 
-#: sidebar.php:70
+#: sidebar.php:52
 msgid "Font size"
 msgstr ""
 
-#: sidebar.php:80 templates/article-single.php:90
+#: sidebar.php:62 templates/article-single.php:101
 msgid "Share"
 msgstr ""
 
-#: sidebar.php:89 templates/article-single.php:72
+#: sidebar.php:71 templates/article-single.php:84
 msgid "Download"
 msgstr ""
 
@@ -74,12 +74,16 @@ msgstr ""
 msgid "Footer template"
 msgstr ""
 
+#: footer.php:36
+msgid "Contact Us"
+msgstr ""
+
 #. Name of the template
 msgid "Archive template"
 msgstr ""
 
 #: archive.php:27
-msgid "Filter Categories By:"
+msgid "Categories Filter:"
 msgstr ""
 
 #: archive.php:37
@@ -90,15 +94,15 @@ msgstr ""
 msgid "single article template"
 msgstr ""
 
-#: templates/article-single.php:50
+#: templates/article-single.php:52
 msgid "Published in "
 msgstr ""
 
-#: templates/article-single.php:85
+#: templates/article-single.php:95
 msgid "Last reviewed in <br />"
 msgstr ""
 
-#: templates/article-single.php:100
+#: templates/article-single.php:111
 msgid "Tags"
 msgstr ""
 

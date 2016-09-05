@@ -23,13 +23,12 @@ get_header(); ?>
         <?php echo $term->name ?>
       </h1>
     <?php if (have_posts()): ?>
-      <ul class="category_filter">
-        <span class="filter-title"><?php echo _e('Filter Categories By:', 'moran'); ?></span>
+      <div class="category_filter">
+        <span class="filter-title"><?php echo _e('Categories Filter:', 'moran'); ?></span>
+        <ul>
         <?php foreach ($post_types as $post_type): ?>
           <li>
-            <a href="#" data-filter="<?php echo $post_type->name ?>">
-              <?php echo $post_type->labels->menu_name ?>
-            </a>
+            <a href="#" data-filter="<?php echo $post_type->name ?>"><?php echo $post_type->labels->menu_name ?></a>
           </li>
         <?php endforeach; ?>
           <li>
@@ -37,7 +36,9 @@ get_header(); ?>
               <?php echo _e('Show all', 'moran'); ?>
             </a>
           </li>
-      </ul>
+        </ul>
+      </div>
+
     <?php endif; ?>
     </div> <!-- End of Category Header -->
     <div class="category_body body">

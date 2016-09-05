@@ -14,8 +14,23 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 (function($){
   $(document).ready(function(){
   // HEADER
-  // Control menu with icons
-    $closeAll = $('.menu_btn .btn_close-all');
+  // Show/hide full menu
+    $('.menu_btn span').click(function(){
+      if (!$('html').hasClass('is-overlay') || !$('body').hasClass('has-search')) {
+        $('html').toggleClass('is-overlay ');
+        $('body').toggleClass('has-full');
+      }
+      return false;
+    });
+  // Show/hide Search
+    $('.search_btn span').click(function(){
+      if (!$('html').hasClass('is-overlay') || !$('body').hasClass('has-full')) {
+        $('html').toggleClass('is-overlay ');
+        $('body').toggleClass('has-search');
+      }
+      return false;
+    });
+    /*$closeAll = $('.menu_btn .btn_close-all');
     $showFullMenu = $('.menu_btn .btn_full-menu');
     function showFullMenu(){
       $showFullMenu.slideUp();
@@ -53,32 +68,32 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       }
     });
   // Show no results message
-    function noResults(){
-    /*  numArticles = $('.grid article:visible').length;
+    /*function noResults(){
+      numArticles = $('.grid article:visible').length;
       noResult = $('.grid-results');
       if(numArticles === 0) {
         noResult.show(400);
       } else {
         noResult.removeAttr('style');
-      }*/
-    }
-  // Filter articles by category
-    $optionSets = $('.category_filter');
-    $optionLinks = $optionSets.find('a');
-    $optionLinks.click(function(){
-      $this = $(this);
-      if ( $this.hasClass('selected') ) {
-        return false;
       }
+    }*/
+   // Filter articles by category
+   $optionSets = $('.category_filter');
+   $optionLinks = $optionSets.find('a');
+   $optionLinks.click(function(){
+     $this = $(this);
+     if ( $this.hasClass('selected') )
+       return false;
+     
     $optionSet = $this.parents('.category_filter');
     $optionSets.find('.selected').removeAttr('class');
     $this.addClass('selected');
-    selector = $(this).attr('data-filter');
 
+    selector = $(this).attr('data-filter');
     $grid.isotope({ filter: selector });
     /*$grid.on('arrangeComplete',noResults);*/
     return false;
-    });
+  });
   // Clean post from attributes and elements (added by copying from Word)
     // Remove table width
     $('table, td').removeAttr('width');
@@ -95,24 +110,31 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     $(this).wrap('<sup class="article_endnote" />');
   });
   $endnotes = $endnotes.text().replace(/[\[\]']+/g, '');
-  // Show/hide table of content
-  if ($('.has-sidebar .toc_show-hide .btn_close').css('marginTop') == '-35px'){
-    $('body').toggleClass('has-sidebar hidden-sidebar');
-  }
-  $('.toc_show-hide span').click(function(){
-    $('body').toggleClass('has-sidebar hidden-sidebar');
-    $(this).parents('.toc_show-hide').toggleClass('toc_close');
-  });
-  // Article reading options
+  // Single article header-related icons
+    // Show/hide table of content
+    if ($('.has-sidebar .toc_show-hide .btn_close').css('marginTop') == '-35px'){
+      $('body').toggleClass('has-sidebar hidden-sidebar');
+    }
+    $('.toc_show-hide span').click(function(){
+      if (!$('html').hasClass('is-overlay')) {
+        $('body').toggleClass('has-sidebar hidden-sidebar');
+        $(this).parents('.toc_show-hide').toggleClass('toc_close');
+      }
+    });
     // Show/hide options
     sidebarOptions = $('.sidebar_options');
     $('.options_show-hide span').click(function(e){
-      $(sidebarOptions).toggle();
-      e.stopPropagation();
+      if (!$('html').hasClass('is-overlay')) {
+        $(sidebarOptions).toggle();
+        e.stopPropagation();
+      }
     });
+
     $(window).click(function(){
       $(sidebarOptions).hide();
     });
+
+  // Article reading options
     // Dark mode
 		$('.read-mode_ctrl a').click(function(){
 			$('body').toggleClass('dark-mode_active');

@@ -66,14 +66,15 @@
     <div class="header_navigation">
       <div class="navigation_menu header-item inline">
         <div class="menu_btn ctrl-btn">
-          <span class="btn_cat-menu">
+          <!--span class="btn_cat-menu">
             <i class="fa fa-ellipsis-h"></i>
-          </span>
+          </span--->
           <span class="btn_full-menu">
             <i class="fa fa-bars"></i>
           </span>
           <span class="btn_close-all">
             <i class="fa fa-close"></i>
+
           </span>
         </div>
       </div>
@@ -109,7 +110,7 @@
       ));
       ?>
     </div>
-    <div class="header_overlay header_callables hidden">
+    <div class="header_overlay header_callables">
       <?php get_template_part('templates/global', 'overlay') ;?>
     </div>
   </header>

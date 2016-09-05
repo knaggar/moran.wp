@@ -34,12 +34,14 @@ header [class^="header_"]:not(.header_callables) {padding:.85em 1em}
 .hidden-sidebar .header_navigation, .single .header_navigation {width:calc(35% - 55px - 2em)}
 .branding_site .logo {max-width:182px}
 .ctrl-btn {width:55px;height:55px;line-height: 55px}
-.home .btn_cat-menu {margin-top:-55px}
-.btn_cat-menu {margin-top:0}
+/*.home .btn_cat-menu {margin-top:-55px}*/
+/*.btn_cat-menu {margin-top:0}*/
 .home .header_categories {/*display:block;/* remove at the end */display: none}
 
 .toc_show-hide .btn_close {margin:0}
 .hidden-sidebar .toc_show-hide .btn_close {margin-top:-55px}
+
+body.has-full .btn_full-menu {margin-top:-55px}
 
 /*--------------
   ARTICLE / Featured
@@ -50,7 +52,7 @@ header [class^="header_"]:not(.header_callables) {padding:.85em 1em}
   ARTICLE / Archive
 --------------*/
 .category_article {width:calc(25% - 20px);margin:10px;height:290px}
-.category_article.focus {width:calc(50% - 20px)}
+.category_article.focus {width:calc(50% - 20px);}
 .category_article-thumbnail {height:60%;overflow:hidden;padding-bottom:20%}
 .category_article.has_thumb .category_article-text {height:40%}
 

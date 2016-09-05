@@ -66,17 +66,20 @@ html.is-overlay header {bottom:0}
 .ctrl-btn span {display:block;color:rgba(255, 255, 255, 0.8);;font-size:1.5rem;cursor: pointer;transition: all .2s ease}
 .ctrl-btn span:hover {color:#fff}
 
+body.has-full .btn_full-menu {margin-top:-35px}
+
 .branding_switch {background:#fff}
 .btn_lang a {text-transform: uppercase;font-size:1.4rem;font-weight: bold;display:block}
 .btn_lang a:hover{color:#405db8}
 .branding_site .logo {display:block;max-width:115.5px;height:auto}
 .branding_switch span {color:#101010}
-.btn_cat-menu{margin-top:-35px}
+/*.btn_cat-menu{margin-top:-35px}*/
 
 .control-toc {background:#000}
 .control-options {background:#0229a2}
 .toc_show-hide .btn_close {margin-top:-35px}
 .toc_close .btn_close {margin-top: 0}
+.is-overlay .header_sidebar-control span {display: none}
 
 
 .header_categories {display:none}
@@ -92,17 +95,15 @@ html.is-overlay header {bottom:0}
 
 .header_overlay {height:100%;background:#fff;}
 
-.overlay_full-menu {display: flex;height:100%;}
-/*.overlay_item {width:46%; margin:0 2%;}*/
+.overlay_full-menu {display:none;height:100%;}
+.has-full .overlay_full-menu {display:flex}
 .overlay_full-menu .overlay_row {display:flex;align-items: center}
-
 .overlay_full-menu a:hover {color:#405db8}
 .overlay_nav-img ul{width:100%; max-height:100px;margin-bottom: 3em;display:none}
 .overlay_nav-cat a{font-size:2.75vmax;}
 .social-profile {display:flex;font-size:2.75rem;line-height: 35px}
 .social-profile li {margin:0 5px}
 .social-profile a {display:block;}
-
 .social-profile .facebook a:hover, .social-share .facebook a:hover {color:#3b5998}
 .social-profile .twitter a:hover, .social-share .twitter a:hover {color:#00aced}
 .overlay_full-about {font-size:1.5vmax;}
@@ -110,6 +111,10 @@ html.is-overlay header {bottom:0}
 .widget_credit-icon {font-size:2em}
 .widget_credit-icon i {margin: 0 3px}
 .widget_credit .widget_item {display:inline-block;vertical-align: middle}
+
+.overlay_full-search {display:none;height:100%}
+.has-search .overlay_full-search {display: block}
+
 
 .top_btn {display:none;background:#101010;position:fixed;right:2%;bottom:2%;z-index:99}
 .top_btn span {color:#fff}
@@ -142,7 +147,7 @@ ARTICLE / Archive
 --------------*/
 .category_header {border-bottom:1px solid #d4d4d4}
 .category_title {color:#1034a6}
-.category_filter {display:flex;display:none}
+.category_filter {/*display:flex;*/display:none}
 .filter-title {line-height: 2}
 .category_filter li {margin:0 5px}
 .category_filter a {border:1px solid transparent;color:#c3c3c3;padding:0 8px}

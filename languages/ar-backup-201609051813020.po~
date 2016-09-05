@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: moran\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-05 18:13+0000\n"
-"PO-Revision-Date: 2016-09-05 20:20+0200\n"
+"POT-Creation-Date: 2016-09-04 16:37+0000\n"
+"PO-Revision-Date: 2016-09-04 18:37+0200\n"
 "Last-Translator: dev <go@kareematif.me>\n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
@@ -46,13 +46,17 @@ msgstr ""
 msgid "Footer template"
 msgstr ""
 
+#: footer.php:36
+msgid "Contact Us"
+msgstr "تواصل معنا"
+
 #. Name of the template
 msgid "Archive template"
 msgstr ""
 
 #: archive.php:27
-msgid "Categories Filter:"
-msgstr "فلْترة بالقسم:"
+msgid "Filter Categories By:"
+msgstr ""
 
 #. Name of the template
 msgid "single article template"
@@ -345,10 +349,6 @@ msgstr "تحميل"
 #: index.php:16
 msgid "Chosen Article"
 msgstr "مقالة مختارة"
-
-#: footer.php:36
-msgid "Contact Us"
-msgstr "تواصل معنا"
 
 #: archive.php:37
 msgid "Show all"
