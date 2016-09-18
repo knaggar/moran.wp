@@ -33,6 +33,7 @@ body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
 .rtl .btn_lang a {font-family:'Oswald', sans-serif}
 .rtl .header_navigation .inline {float:left!important}
 
+.rtl .form_advanced-options .field-item {float:right}
 /*--------------
   MAIN
 --------------*/
@@ -42,10 +43,12 @@ body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
   ARTICLE / Featured
 --------------*/
 .rtl .featured_article-body:after {right:0;left:inherit}
+.rtl .featured_article-thumbnail {left:0;right:inherit}
 
 /*--------------
   ARTICLE / Archive
 --------------*/
+.rtl .category_filter li {float:right}
 .rtl .category_article {float:right}
 .rtl .category_article:before, .rtl .category_article:after {right:0;left:inherit}
 
@@ -80,7 +83,7 @@ body.rtl {font-family:'JF Flat Regular', Arial, sans-serif;}
 @media only screen and (min-width:769px){
   .rtl.has-sidebar .main_container {margin:135px 20% 60px 10%}
   .rtl .col-widget {float:right}
-  
+
   .rtl.hidden-sidebar .sidebar_toc {margin-right:-100%;margin-left:inherit}
   .rtl .footer_widget.widget_credit {float:left}
   .rtl .widget_container, .rtl .footer_widget.widget_credit {border-right:8px solid;border-left:none}

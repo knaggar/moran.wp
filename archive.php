@@ -28,7 +28,9 @@ get_header(); ?>
         <ul>
         <?php foreach ($post_types as $post_type): ?>
           <li>
-            <a href="#" data-filter="<?php echo $post_type->name ?>"><?php echo $post_type->labels->menu_name ?></a>
+            <a href="#" data-filter="<?php echo '.' . $post_type->name ?>">
+              <?php echo $post_type->labels->menu_name ?>
+            </a>
           </li>
         <?php endforeach; ?>
           <li>

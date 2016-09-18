@@ -34,7 +34,7 @@ $featured_posts->the_post();  ?>
     </div>
     <div class="featured_article-text article_text">
       <h2 class="featured_article-title article_title">
-        <a href="<?php the_permalink();?> "><?php the_title(); ?></a>
+        <a href="<?php the_permalink();?> "><span><?php the_title(); ?></span></a>
       </h2>
       <div class="featured_article-body article_body">
         <?php the_excerpt(); ?>

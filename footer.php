@@ -47,6 +47,8 @@
     </div>
   </div>
 </footer>
+<?php // Enable WP Advacned Search dubug. Remove in staging. ?>
+<div id="wpas-debug"></div>
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: moran\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-04 16:37+0000\n"
-"PO-Revision-Date: 2016-09-04 18:37+0200\n"
+"POT-Creation-Date: 2016-09-17 16:27+0000\n"
+"PO-Revision-Date: 2016-09-17 18:29+0200\n"
 "Last-Translator: dev <go@kareematif.me>\n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
@@ -46,16 +46,8 @@ msgstr ""
 msgid "Footer template"
 msgstr ""
 
-#: footer.php:36
-msgid "Contact Us"
-msgstr "تواصل معنا"
-
 #. Name of the template
 msgid "Archive template"
-msgstr ""
-
-#: archive.php:27
-msgid "Filter Categories By:"
 msgstr ""
 
 #. Name of the template
@@ -93,6 +85,14 @@ msgstr ""
 #. Name of the template
 msgid "credit template"
 msgstr ""
+
+#: templates/footer-credit.php:13
+msgid ""
+"except for <a href=\"%s\">website design & develop</a>, or mentioned "
+"elsewhere,<br /> This work is provided under a Creative Commons License"
+msgstr ""
+"فيما عدا <a href=\"%s\"> تصميم وتطوير الموقع</a>، أو ما لم يتم الإشارة له،"
+"<br /> فإن هذا العمل تحت رخصة المشاع الإبداعي."
 
 #: includes/wp_custom-taxonomy.php:15
 msgctxt "Taxonomy General Name"
@@ -350,7 +350,15 @@ msgstr "تحميل"
 msgid "Chosen Article"
 msgstr "مقالة مختارة"
 
-#: archive.php:37
+#: footer.php:36
+msgid "Contact Us"
+msgstr "تواصل معنا"
+
+#: archive.php:27
+msgid "Categories Filter:"
+msgstr "فلْترة بالقسم:"
+
+#: archive.php:38
 msgid "Show all"
 msgstr "إظهار الكل"
 
@@ -373,14 +381,6 @@ msgstr "لا يوجد محتوى، برجاء محاولة مرة أخرى"
 #: templates/article-featured.php:42
 msgid "Read more"
 msgstr "اقرأ المزيد"
-
-#: templates/footer-credit.php:13
-msgid ""
-"except for <a href=\"%s\">theme design & develop</a>, or mentioned elsewhere,"
-"<br /> This work is provided under a Creative Commons License"
-msgstr ""
-"فيما عدا <a href=\"%s\"> تصميم وتطوير القالب</a>، أو ما يتم الإشارة له،<br /"
-"> فإن هذا العمل تحت رخصة المشاع الإبداعي"
 
 #: includes/wp_social-service.php:21
 msgid "Share on Facebook"

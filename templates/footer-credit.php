@@ -10,7 +10,7 @@
 */
 
 $github = 'https://github.com/kaeid/moran.wp';
-$credit = sprintf(wp_kses( __('except for <a href="%s">theme design & develop</a>, or mentioned elsewhere,<br /> This work is provided under a Creative Commons License', 'moran'),
+$credit = sprintf(wp_kses( __('except for <a href="%s">website design & develop</a>, or mentioned elsewhere,<br /> This work is provided under a Creative Commons License', 'moran'),
 array ('a' => array('href' => array()), 'br' => array() )), esc_url($github)); ?>
 
 <span class="widget_credit-icon widget_item">

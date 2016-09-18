@@ -21,21 +21,21 @@
   <div class="site_container">
   <header>
 <div class="header-row row">
-  <?php if(is_singular() && toc_get_index()): ?>
-    <div class="header_sidebar-control control-toc">
-      <div class="toc_show-hide">
-        <div class="show-hide_btn ctrl-btn">
-          <span class="btn_close">
-            <i class="fa fa-close"></i>
-          </span>
-          <span class="btn_toc">
-            <i class="fa fa-file-text"></i>
-          </span>
-        </div>
-      </div>
-    </div>
-  <?php endif; ?>
     <div class="header_branding">
+      <?php if(is_singular() && toc_get_index()): ?>
+        <div class="control-toc header-item inline">
+          <div class="toc_show-hide">
+            <div class="show-hide_btn ctrl-btn">
+              <span class="btn_close">
+                <i class="fa fa-close"></i>
+              </span>
+              <span class="btn_toc">
+                <i class="fa fa-file-text"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
       <div class="branding_switch header-item inline">
         <div class="switch_btn ctrl-btn">
             <span class="btn_lang">
@@ -57,13 +57,24 @@
         </h1>
         <?php endif; ?>
         <div class="search-input">
-          <?php $advanced_search_form = new WP_Advanced_Search('advanced_search_form');
+          <?php $advanced_search_form = new WP_Advanced_Search('advanced-search');
                 $advanced_search_form->the_form();
           ?>
         </div>
       </div>
     </div>
     <div class="header_navigation">
+      <?php if(is_singular()): ?>
+      <div class="control-options header-item inline">
+        <div class="options_show-hide">
+          <div class="show-hide_btn ctrl-btn">
+            <span class="btn_toc">
+              <i class="fa fa-cog"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <?php endif; ?>
       <div class="navigation_menu header-item inline">
         <div class="menu_btn ctrl-btn">
           <!--span class="btn_cat-menu">
@@ -85,18 +96,9 @@
           </span>
         </div>
       </div>
+
     </div>
-    <?php if(is_singular()): ?>
-    <div class="header_sidebar-control control-options">
-      <div class="options_show-hide">
-        <div class="show-hide_btn ctrl-btn">
-          <span class="btn_toc">
-            <i class="fa fa-cog"></i>
-          </span>
-        </div>
-      </div>
-    </div>
-    <?php endif; ?>
+
   </div>
     <div class="header_categories header_callables <?php if(!is_home()){ echo 'hidden'; } ?>">
       <?php // Show Category navigation
@@ -114,8 +116,7 @@
       <?php get_template_part('templates/global', 'overlay') ;?>
     </div>
   </header>
-  <?php // Enable WP Advacned Search dubug. Remove in staging. ?>
-  <div id="wpas-debug"></div>
   <main>
+    
     <div class="main_container container">
       <?php if (is_singular()) get_sidebar (); ?>

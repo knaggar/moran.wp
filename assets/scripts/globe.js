@@ -30,6 +30,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       }
       return false;
     });
+
+    // Search advanced form
+    /*$('#form_advanced-options').prependTo($('.search-header form'));*/
+
+		$('.field-search input').keypress(function() {
+		    $('.search-header').slideDown('slow');
+		});
+		if( $('.drawer-container input').val() ) {
+	          $('.search-header').show();
+	    }
+    $('input:checkbox').change(function(){
+      if($(this).is(':checked')) {
+        $(this).parent().addClass('selected');
+      }else{
+        $(this).parent().removeClass('selected');
+      }
+    });
+    $select = $('.field-item select').dropdown({
+    });
+
     /*$closeAll = $('.menu_btn .btn_close-all');
     $showFullMenu = $('.menu_btn .btn_full-menu');
     function showFullMenu(){
@@ -54,6 +74,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     });
 */
   // CONTENT
+  // Featured Article Thumbnail height
+  thumbHeight();
+  $(window).resize(thumbHeight);
+  function thumbHeight(){
+    $containerMargin = $('.main_container').css('marginTop');
+    $articleHeight = $('.article_featured').height();
+    $thumbTop = $('.featured_article-thumbnail').css('top');
+    $thumbHeight = parseInt($articleHeight) + parseInt($containerMargin) - parseInt($thumbTop);
+    $('.featured_article-thumbnail').css({'max-height': $thumbHeight + 'px'});
+  }
+
+
   // Show articles in grid
     $grid = $('.rtl .body_main.grid').isotope({
       originLeft: false,
@@ -68,6 +100,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       }
     });
   // Show no results message
+  function noResults(){
+    numArticles = $('.body_main.grid article:visible').length;
+    if(numArticles === 0) {
+    console.log('No Items FOUND!');
+    }
+  }
     /*function noResults(){
       numArticles = $('.grid article:visible').length;
       noResult = $('.grid-results');
@@ -80,18 +118,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
    // Filter articles by category
    $optionSets = $('.category_filter');
    $optionLinks = $optionSets.find('a');
-   $optionLinks.click(function(){
+   $optionLinks.on('mousedown', function(){
      $this = $(this);
-     if ( $this.hasClass('selected') )
+     if ( $this.hasClass('selected') ){
        return false;
-     
+     }
     $optionSet = $this.parents('.category_filter');
     $optionSets.find('.selected').removeAttr('class');
     $this.addClass('selected');
-
     selector = $(this).attr('data-filter');
+
     $grid.isotope({ filter: selector });
-    /*$grid.on('arrangeComplete',noResults);*/
+    $grid.on('arrangeComplete',noResults);
     return false;
   });
   // Clean post from attributes and elements (added by copying from Word)
@@ -176,5 +214,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   $('.btn_top').click(function(){
     $('html, body').animate({scrollTop:0}, 'slow');
   });
+  // Devel debug
+  hljs.configure({useBR: true});
+  $('#wpas-debug pre').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
   });
 })(jQuery);

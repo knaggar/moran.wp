@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-04 16:37+0000\n"
+"POT-Creation-Date: 2016-09-17 16:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -83,10 +83,10 @@ msgid "Archive template"
 msgstr ""
 
 #: archive.php:27
-msgid "Filter Categories By:"
+msgid "Categories Filter:"
 msgstr ""
 
-#: archive.php:37
+#: archive.php:38
 msgid "Show all"
 msgstr ""
 
@@ -148,8 +148,8 @@ msgstr ""
 
 #: templates/footer-credit.php:13
 msgid ""
-"except for <a href=\"%s\">theme design & develop</a>, or mentioned elsewhere,"
-"<br /> This work is provided under a Creative Commons License"
+"except for <a href=\"%s\">website design & develop</a>, or mentioned "
+"elsewhere,<br /> This work is provided under a Creative Commons License"
 msgstr ""
 
 #: includes/wp_social-service.php:21

@@ -13,7 +13,7 @@ get_header();
   <div class="article_featured">
     <div class="featured_header header">
       <h1 class="featured_title">
-        <?php echo _e('Chosen Article', 'moran');?>
+        <span><?php echo _e('Chosen Article', 'moran');?></span>
       </h1>
     </div>
     <div class="featured_body body">

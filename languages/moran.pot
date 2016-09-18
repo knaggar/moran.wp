@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-05 18:11+0000\n"
+"POT-Creation-Date: 2016-09-18 22:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -86,8 +86,12 @@ msgstr ""
 msgid "Categories Filter:"
 msgstr ""
 
-#: archive.php:37
+#: archive.php:38
 msgid "Show all"
+msgstr ""
+
+#. Name of the template
+msgid "article template"
 msgstr ""
 
 #. Name of the template
@@ -104,10 +108,6 @@ msgstr ""
 
 #: templates/article-single.php:111
 msgid "Tags"
-msgstr ""
-
-#. Name of the template
-msgid "article template"
 msgstr ""
 
 #. Name of the template
@@ -148,8 +148,8 @@ msgstr ""
 
 #: templates/footer-credit.php:13
 msgid ""
-"except for <a href=\"%s\">theme design & develop</a>, or mentioned elsewhere,"
-"<br /> This work is provided under a Creative Commons License"
+"except for <a href=\"%s\">website design & develop</a>, or mentioned "
+"elsewhere,<br /> This work is provided under a Creative Commons License"
 msgstr ""
 
 #: includes/wp_social-service.php:21
@@ -382,6 +382,18 @@ msgstr ""
 
 #: includes/wp_customizer.php:14 includes/wp_customizer.php:21
 msgid "Logo"
+msgstr ""
+
+#: includes/wpas_advanced-search.php:37
+msgid "Enter Search here..."
+msgstr ""
+
+#: includes/wpas_advanced-search.php:68
+msgid "Title"
+msgstr ""
+
+#: includes/wpas_advanced-search.php:69
+msgid "Date"
 msgstr ""
 
 #. Name of the theme

@@ -50,5 +50,12 @@
   </div>
 <div class="overlay_full-search">
 
+  <div class="search-header header">
+    <?php echo $wp_query->found_posts; ?>
+  </div>
+  <div class="search-body body">
+      <div id="wpas-results"></div>
+  </div>
+
 </div>
 </div>
