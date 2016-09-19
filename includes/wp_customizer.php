@@ -3,7 +3,7 @@
 *
 * @package moran
 * @subpackage Theme customizer
-* @version 1.5
+* @version v0.2-beta.1
 * Description: Add custom options to handle with theme
 *
 */

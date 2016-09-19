@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage single template
-* @version 1.5
+* @version v0.2-beta.1
 * Template Name: Single template
 * Description: Display single post's content, thumbnails and/or any other attachements (such as custom fields).
 */

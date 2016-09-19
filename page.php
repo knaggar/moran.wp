@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage page template
-* @version 1.5
+* @version v0.2-beta.1
 * Template Name: page template
 * Description: Display single pages's content, thumbnails and/or any other attachements (such as custom fields).
 */

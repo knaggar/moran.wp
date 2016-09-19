@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage footer template
-* @version 1.5
+* @version v0.2-beta.1
 * Template Name: Footer template
 * Description: contains closing tags for global HTML elemetns. Also list blocks of navigation (not necessarily) and credits of website coding and contents licenses.
 */

@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage index template
-* @version 1.5
+* @version v0.2-beta.1
 * Template Name: Main template
 * Description: main templates page, displays defult query.
 */

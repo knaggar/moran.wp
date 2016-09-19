@@ -3,7 +3,7 @@
 *
 * @package moran
 * @subpackage Advacned search form
-* @version 1.5
+* @version v0.2-beta.1
 * Description: form functions and options for WP advanced search framework
 *
 */
@@ -51,7 +51,7 @@ function advanced_search_form(){
     'format' => 'select',
     'class' => 'type_items',
     'values' => array(
-      '' => 'Select Category',
+      '' => __('Select Category', 'moran'),
       'policy_analysis' => __('Policy Analysis', 'moran'),
       'facts_budgets' => __('Facts & Budgets', 'moran'),
       'research' => __('Research', 'moran'),
@@ -64,7 +64,7 @@ function advanced_search_form(){
     'type' => 'orderby',
     'format' => 'select',
     'values' => array(
-      '' => 'Order by',
+      '' => __('Order by', 'moran'),
       'title' => __('Title', 'moran'),
       'date' => __('Date', 'moran')
     ),

@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage Article featured`
-* @version 1.5
+* @version v0.2-beta.1
 * Template Name: feature article template
 * Description: a template for featured article which appears on front page.
 * called by index.php only

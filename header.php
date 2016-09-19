@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage header template
-* @version 1.5
+* @version v0.2-beta.1
 * Template Name: Header template
 * Description: contains HTML metadata and Header block that display logo and navigation elements.
 */

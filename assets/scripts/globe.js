@@ -1,7 +1,7 @@
 /* !
 Globe.js
 Description: contains all scripts of elements, in respect of mobile-first design.
-version: 1.5
+Version: v0.2-beta.1
 Date updated: 4th Aug 2016
 Package: moran
 Theme URI: https://github.com/kaeid/moran

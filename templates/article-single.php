@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage Article single`
-* @version 1.5
+* @version v0.2-beta.1
 * Template Name: single article template
 * Description: a template for single post of article.
 * called by single.php only

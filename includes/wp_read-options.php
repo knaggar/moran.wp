@@ -3,7 +3,7 @@
 *
 * @package moran
 * @subpackage Read options
-* @version 1.5
+* @version v0.2-beta.1
 * Description: add reading options to single post.
 *
 */
