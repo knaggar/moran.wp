@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage archive template
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Template Name: Archive template
 * Description: Display taxonomy queries.
 *

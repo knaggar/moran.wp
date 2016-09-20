@@ -1,7 +1,7 @@
 /* !
 Responsive.css
 Description: show elements in different sizes, mostly largeer than 480px width.
-Version: v0.2-beta.1
+Version: v0.2-beta.5
 Date updated: 4th Aug 2016
 Package: moran
 Theme URI: https://github.com/kaeid/moran.wp
@@ -23,7 +23,7 @@ html {font-size:100%}
 --------------*/
 .main_container {margin:135px 10% 60px}
 .has-sidebar .main_container {margin:135px 10% 60px 20%}
-.home .main_container {margin-top:250px}
+/*.home .main_container {margin-top:250px}*/
 
 .col-widget {float:left}
 /*--------------
@@ -34,7 +34,7 @@ header [class^="header_"]:not(.header_callables) {padding:.85em 1em}
 .branding_site .logo {max-width:181.5px}
 .ctrl-btn {width:55px;height:55px;line-height: 55px}
 
-.home .header_categories {/*display:block;*/display:none}
+/*.home .header_categories {/*display:block;display:none}*/
 .header_overlay {top:82px}
 .toc_show-hide .btn_close {margin:0}
 .hidden-sidebar .toc_show-hide .btn_close {margin-top:-55px}
@@ -42,12 +42,19 @@ header [class^="header_"]:not(.header_callables) {padding:.85em 1em}
 body.has-full .btn_full-menu {margin-top:-55px}
 body.has-search .btn_lang {margin-top:-55px}
 body.has-search .branding_site .logo {margin-top: -55px}
+.search-input input {line-height: 54px}
 .form_advanced-options {top: calc(55px + 1.7em)}
+
+/*--------------
+  NAVIGATION - Categories
+--------------*/
+.main_categories {display: block}
+
 /*--------------
   ARTICLE / Featured
 --------------*/
-.article_featured {width:60%;margin: 0 auto}
-.featured_article-thumbnail {top:calc(55px + 1.7em);}
+.article_featured {width:35%;margin: 0 0 0 65%}
+.featured_article-thumbnail {top:calc(55px + 1.7em);width: 65%}
 
 /*--------------
   ARTICLE / Archive
@@ -64,7 +71,7 @@ body.has-search .branding_site .logo {margin-top: -55px}
   ARTICLE / Single
 --------------*/
 .single_article-thumbnail {max-width:75%;max-height:415px;overflow: hidden}
-.has-thumb .single_article-text {position:absolute;max-width:50%}
+.has-thumb .single_article-text {position:absolute;max-width:40%}
 .single_article-footer .row{display: flex}
 .endnotes_body {column-count: 2;}
 

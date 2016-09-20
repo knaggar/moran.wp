@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage Article Empty
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Template Name: Empty Archive template
 * Description: Display message if no article found, even in search.
 * called by archive.php

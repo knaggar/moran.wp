@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage header template
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Template Name: Header template
 * Description: contains HTML metadata and Header block that display logo and navigation elements.
 */
@@ -100,23 +100,11 @@
     </div>
 
   </div>
-    <div class="header_categories header_callables <?php if(!is_home()){ echo 'hidden'; } ?>">
-      <?php // Show Category navigation
-      wp_nav_menu(array(
-        'theme_location' => 'category',
-        'container_id'   => 'categories_nav',
-        'container_class'   => 'categories_nav',
-        'menu_class'     => 'nav-cat_menu',
-        'link_before' => '<span>',
-        'link_after' => '</span>'
-      ));
-      ?>
-    </div>
     <div class="header_overlay header_callables">
       <?php get_template_part('templates/global', 'overlay') ;?>
     </div>
   </header>
   <main>
-    
+
     <div class="main_container container">
       <?php if (is_singular()) get_sidebar (); ?>

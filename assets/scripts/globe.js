@@ -1,7 +1,7 @@
 /* !
 Globe.js
 Description: contains all scripts of elements, in respect of mobile-first design.
-Version: v0.2-beta.1
+Version: v0.2-beta.5
 Date updated: 4th Aug 2016
 Package: moran
 Theme URI: https://github.com/kaeid/moran
@@ -82,7 +82,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     $articleHeight = $('.article_featured').height();
     $thumbTop = $('.featured_article-thumbnail').css('top');
     $thumbHeight = parseInt($articleHeight) + parseInt($containerMargin) - parseInt($thumbTop);
-    $('.featured_article-thumbnail').css({'max-height': $thumbHeight + 'px'});
+    $('.featured_article-thumbnail, .main_categories').css({'height': $thumbHeight + 'px'});
   }
 
 
@@ -213,11 +213,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   });
   $('.btn_top').click(function(){
     $('html, body').animate({scrollTop:0}, 'slow');
-  });
-  // Devel debug
-  hljs.configure({useBR: true});
-  $('#wpas-debug pre').each(function(i, block) {
-    hljs.highlightBlock(block);
   });
 
   });

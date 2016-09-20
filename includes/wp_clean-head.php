@@ -3,7 +3,7 @@
 *
 * @package moran
 * @subpackage clean head
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Description: clean wp defaults for <HEAD>
 *
 */

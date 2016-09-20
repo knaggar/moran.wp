@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage Article single`
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Template Name: single article template
 * Description: a template for single post of article.
 * called by single.php only
@@ -59,14 +59,16 @@ if (has_post_thumbnail()):
     </div><!-- end of article header -->
     <div class="single_article-body article_body">
       <div class="article_body-main"><?php the_content();?></div>
+      <?php if (have_rows('endnotes')):?>
       <div class="article_body-secondary">
-        <?php if(get_field('endnotes_title') && get_field('endnotes_body')): ?>
+        <?php while(have_rows('endnotes')) : the_row(); ?>
         <div class="article_endnotes">
-          <h3 class="endnotes_title"><?php the_field('endnotes_title') ;?></h3>
-          <div class="endnotes_body"><?php the_field('endnotes_body') ;?></div>
+          <h3 class="endnotes_title"><?php the_sub_field('endnotes_title') ;?></h3>
+          <div class="endnotes_body"><?php the_sub_field('endnotes_body') ;?></div>
         </div>
-        <?php endif; ?>
+      <?php endwhile; ?>
       </div>
+    <?php endif; ?>
     </div><!-- end of article body -->
     <div class="single_article-footer article_footer">
       <div class="row">

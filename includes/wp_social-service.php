@@ -3,7 +3,7 @@
 *
 * @package moran
 * @subpackage Social network share
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Description: share single article with different services. Also show social profiles of project.
 *
 */

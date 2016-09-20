@@ -3,7 +3,7 @@
 *
 * @package moran
 * @subpackage Advacned search form
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Description: form functions and options for WP advanced search framework
 *
 */

@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage sidebar template
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Template Name: Sidebar template
 * Description: Display single post's table of content and alternative options.
 */

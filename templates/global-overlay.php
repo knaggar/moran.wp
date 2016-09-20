@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage overlay template
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Template Name: Overlay template
 * Description: a global template which contains full menu or search results
 *

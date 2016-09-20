@@ -3,7 +3,7 @@
 *
 * @package moran
 * @subpackage Custom taxonomies
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Description: enable custom taxonomies
 *
 */

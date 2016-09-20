@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage Article Page
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Template Name: Page template
 * Description: a template for article which appears as single page.
 * called by index.php only

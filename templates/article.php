@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage Article template`
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Template Name: article template
 * Description: a template for articles show in loop
 * called by archive.php only

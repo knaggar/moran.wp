@@ -2,7 +2,7 @@
 /**
 * @package moran
 * @subpackage Credit
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Template Name: credit template
 * Description: credit for license of content and website.
 * called by footer.php only

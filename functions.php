@@ -3,7 +3,7 @@
 *
 * @package moran
 * @subpackage functions
-* @version v0.2-beta.1
+* @version v0.2-beta.5
 * Description: contains functions and definations for theme and other extra plugins (found in 'includes' folder).
 *
 */
@@ -48,9 +48,6 @@ add_action('after_setup_theme', 'moran_setup');
 
   function style_script_enqueue(){
     /* Styles */
-    // highlight - devel
-    wp_register_style('highlight', get_template_directory_uri(). '/assets/devel/highlight.js/styles/default.css' );
-    wp_enqueue_style('highlight');
     // RESET.css
     wp_register_style('reset', get_template_directory_uri(). '/assets/styles/reset.css','', filemtime(get_stylesheet_directory(). '/assets/styles/reset.css'));
     wp_enqueue_style('reset');
@@ -70,9 +67,6 @@ add_action('after_setup_theme', 'moran_setup');
     wp_register_style('dropdown', get_template_directory_uri(). '/assets/styles/dropdown.min.css');
     wp_enqueue_style('dropdown');
     /* Scripts */
-    // highlight - devel
-    wp_register_script('highlight',  get_template_directory_uri(). '/assets/devel/highlight.js/highlight.pack.js' );
-    wp_enqueue_script('highlight');
     // Transition.js
     wp_register_script('transition', get_template_directory_uri(). '/assets/scripts/transition.min.js' );
     wp_enqueue_script('transition');
@@ -94,14 +88,13 @@ add_action('after_setup_theme', 'moran_setup');
   }
   add_action('init', 'style_script_enqueue');
 // Modify language switcher title
-function my_flag_title($title) {
-  $slug_ar = 'u';
-  if ($title == 'ar'){
-    return $slug_ar;
+function flag_title($title, $slug) {
+  if($slug == 'ar'){
+    $slug = 'ع';
   }
   return $title;
 }
-add_filter('pll_flag_title', 'my_flag_title', 10, 2);
+add_filter('pll_flag_title', 'flag_title', 10, 2);
 // remove core body classes
 function custom_body_class( $wp_classes, $extra_classes ) {
     $whitelist = array( 'rtl', 'home', 'error404', 'logged-in' );

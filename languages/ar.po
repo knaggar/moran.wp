@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: moran\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-18 22:24+0000\n"
-"PO-Revision-Date: 2016-09-19 00:27+0200\n"
+"POT-Creation-Date: 2016-09-20 22:23+0000\n"
+"PO-Revision-Date: 2016-09-21 00:23+0200\n"
 "Last-Translator: dev <go@kareematif.me>\n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
@@ -294,17 +294,13 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: includes/wpas_advanced-search.php:37
-msgid "Enter Search here..."
-msgstr "اكتب كلمات البحث"
+#: includes/wpas_advanced-search.php:54
+msgid "Select Category"
+msgstr "اختر القسم"
 
-#: includes/wpas_advanced-search.php:68
-msgid "Title"
-msgstr "العنوان"
-
-#: includes/wpas_advanced-search.php:69
-msgid "Date"
-msgstr "التاريخ"
+#: includes/wpas_advanced-search.php:67
+msgid "Order by"
+msgstr "رتب حسب"
 
 #. Name of the theme
 msgid "moran"
@@ -342,15 +338,15 @@ msgstr "نظام القراءة"
 msgid "Font size"
 msgstr "حجم الخط"
 
-#: sidebar.php:62 templates/article-single.php:101
+#: sidebar.php:62 templates/article-single.php:103
 msgid "Share"
 msgstr "شارك"
 
-#: sidebar.php:71 templates/article-single.php:84
+#: sidebar.php:71 templates/article-single.php:86
 msgid "Download"
 msgstr "تحميل"
 
-#: index.php:16
+#: index.php:28
 msgid "Chosen Article"
 msgstr "مقالة مختارة"
 
@@ -370,11 +366,11 @@ msgstr "إظهار الكل"
 msgid "Published in "
 msgstr "نشرت في "
 
-#: templates/article-single.php:95
+#: templates/article-single.php:97
 msgid "Last reviewed in <br />"
 msgstr "تم مراجعتها في <br />"
 
-#: templates/article-single.php:111
+#: templates/article-single.php:113
 msgid "Tags"
 msgstr "وسوم"
 
@@ -403,17 +399,33 @@ msgid "Tweet this"
 msgstr "غرد"
 
 #: includes/wp_custom-post-type.php:16 includes/wp_custom-post-type.php:30
+#: includes/wpas_advanced-search.php:55
 msgid "Policy Analysis"
 msgstr "تحليل سياسات"
 
 #: includes/wp_custom-post-type.php:57 includes/wp_custom-post-type.php:71
+#: includes/wpas_advanced-search.php:56
 msgid "Facts & Budgets"
 msgstr "حقائق وميزانيات"
 
 #: includes/wp_custom-post-type.php:98 includes/wp_custom-post-type.php:112
+#: includes/wpas_advanced-search.php:57
 msgid "Research"
 msgstr "أبحاث ومقالات"
 
 #: includes/wp_custom-post-type.php:139 includes/wp_custom-post-type.php:153
+#: includes/wpas_advanced-search.php:58
 msgid "Urban Archive"
 msgstr "أرشيف العمران"
+
+#: includes/wpas_advanced-search.php:37
+msgid "Enter Search here..."
+msgstr "اكتب كلمات البحث"
+
+#: includes/wpas_advanced-search.php:68
+msgid "Title"
+msgstr "العنوان"
+
+#: includes/wpas_advanced-search.php:69
+msgid "Date"
+msgstr "التاريخ"
