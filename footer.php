@@ -47,8 +47,22 @@
     </div>
   </div>
 </footer>
-<?php // Enable WP Advacned Search dubug. Remove in staging. ?>
-<div id="wpas-debug"></div>
+<section class="search_overlay">
+  <div class="overlay_full-search">
+    <?php $advanced_search = new WP_Advanced_Search('advanced-search');
+    $search_query = $advanced_search->query();
+    ?>
+    <div class="search-header header">
+      <div class="search_form">
+        <?php $advanced_search->the_form(); ?>
+      </div>
+    </div>
+    <div class="search-body body">
+      <div id="wpas-results" class="row"></div>
+
+    </div>
+  </div>
+</section>
 <?php wp_footer(); ?>
 </body>
 </html>

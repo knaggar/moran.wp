@@ -26,10 +26,7 @@
         <div class="control-toc header-item inline">
           <div class="toc_show-hide">
             <div class="show-hide_btn ctrl-btn">
-              <span class="btn_close">
-                <i class="fa fa-close"></i>
-              </span>
-              <span class="btn_toc">
+              <span class="btn_toc btn">
                 <i class="fa fa-file-text"></i>
               </span>
             </div>
@@ -38,11 +35,8 @@
       <?php endif; ?>
       <div class="branding_switch header-item inline">
         <div class="switch_btn ctrl-btn">
-            <span class="btn_lang">
+            <span class="btn_lang btn">
               <?php pll_the_languages(array('hide_current'=> 1, 'display_names_as'=> 'slug')); ?>
-            </span>
-            <span class="btn_search">
-              <i class="fa fa-search"></i>
             </span>
         </div>
       </div>
@@ -56,11 +50,7 @@
           <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php echo bloginfo('name'); ?></a>
         </h1>
         <?php endif; ?>
-        <div class="search-input">
-          <?php $advanced_search_form = new WP_Advanced_Search('advanced-search');
-                $advanced_search_form->the_form();
-          ?>
-        </div>
+
       </div>
     </div>
     <div class="header_navigation">
@@ -68,7 +58,7 @@
       <div class="control-options header-item inline">
         <div class="options_show-hide">
           <div class="show-hide_btn ctrl-btn">
-            <span class="btn_toc">
+            <span class="btn_toc btn">
               <i class="fa fa-cog"></i>
             </span>
           </div>
@@ -76,14 +66,12 @@
       </div>
       <?php endif; ?>
       <div class="navigation_menu header-item inline">
+        <span class="menu_title"><?php echo _e('Menu', 'moran'); ?></span>
         <div class="menu_btn ctrl-btn">
-          <!--span class="btn_cat-menu">
-            <i class="fa fa-ellipsis-h"></i>
-          </span--->
-          <span class="btn_full-menu">
+          <span class="btn_full-menu btn">
             <i class="fa fa-bars"></i>
           </span>
-          <span class="btn_close-all">
+          <span class="btn_close-all btn">
             <i class="fa fa-close"></i>
 
           </span>
@@ -91,7 +79,7 @@
       </div>
       <div class="navigation_search header-item inline">
         <div class="search_btn ctrl-btn">
-          <span class="btn_search">
+          <span class="btn_search btn">
             <i class="fa fa-search"></i>
           </span>
         </div>
@@ -100,9 +88,23 @@
     </div>
 
   </div>
-    <div class="header_overlay header_callables">
-      <?php get_template_part('templates/global', 'overlay') ;?>
+  <div class="header_overlay header_callables">
+      <?php  // Show Category navigation
+      wp_nav_menu(array(
+        'theme_location' => 'category',
+        'container_id'   => 'overlay_full-menu',
+        'container_class'=> 'overlay_full-menu overlay_item',
+        'menu_class'     => 'nav-cat_menu',
+      )); ?>
+      <div class="overlay_full-info overlay_item">
+        <div class="info_social">
+          <?php social_profile(); ?>
+        </div>
+        <div class="info_credit">
+          <?php  get_template_part('templates/footer', 'credit'); ?>
+        </div>
     </div>
+  </div>
   </header>
   <main>
 

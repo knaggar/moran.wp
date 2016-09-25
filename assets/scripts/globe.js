@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 (function($){
   $(document).ready(function(){
   // HEADER
-  // Show/hide full menu
+  // Show/hide full Menu
     $('.menu_btn span').click(function(){
       if (!$('html').hasClass('is-overlay') || !$('body').hasClass('has-search')) {
         $('html').toggleClass('is-overlay ');
@@ -22,57 +22,54 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       }
       return false;
     });
-  // Show/hide Search
-    $('.search_btn span').click(function(){
-      if (!$('html').hasClass('is-overlay') || !$('body').hasClass('has-full')) {
-        $('html').toggleClass('is-overlay ');
-        $('body').toggleClass('has-search');
-      }
-      return false;
-    });
-
-    // Search advanced form
-    /*$('#form_advanced-options').prependTo($('.search-header form'));*/
-
-		$('.field-search input').keypress(function() {
-		    $('.search-header').slideDown('slow');
-		});
-		if( $('.drawer-container input').val() ) {
-	          $('.search-header').show();
-	    }
-    $('input:checkbox').change(function(){
-      if($(this).is(':checked')) {
-        $(this).parent().addClass('selected');
-      }else{
-        $(this).parent().removeClass('selected');
-      }
-    });
-    $select = $('.field-item select').dropdown({
-    });
-
-    /*$closeAll = $('.menu_btn .btn_close-all');
-    $showFullMenu = $('.menu_btn .btn_full-menu');
-    function showFullMenu(){
-      $showFullMenu.slideUp();
-      $('html').addClass('is-overlay');
-      $('.header_overlay').removeClass('hidden', 1000);
-      return false;
+  // Show/hide full Search
+  $('.search_btn span').click(function(){
+    if (!$('html').hasClass('is-overlay') || !$('body').hasClass('has-full')) {
+      $('html').toggleClass('is-overlay ');
+      $('body').toggleClass('has-search');
     }
-    function closeFullMenu(){
-      $showFullMenu.slideDown();
-      $('html').removeClass('is-overlay');
-      $('.header_overlay').addClass('hidden', 1000);
-      return false;
-    }
-    $showFullMenu.click(showFullMenu);
-    $closeAll.click(closeFullMenu);
-    /*$showFullMenu.click(function(){
-      $(this).slideUp('slow');
-      $('html').toggleClass('is-overlay');
-      $('.header_overlay').removeClass('hidden', 1000);
+    return false;
+  });
+  // Close all overlay with ESC key
+  $(document).keyup(function(e){
+    if (e.keyCode == 27 ){
+      if ($('body').hasClass('has-full')){
+        $('body').removeClass('has-full');
+        $('html').removeClass('is-overlay');
+      } else if ($('body').hasClass('has-search')){
+        $('body').removeClass('has-search');
+        $('html').removeClass('is-overlay');
+      }
 
-    });
-*/
+    }
+  });
+  // Show/hide filters
+  $('.filters_header').click(function(){
+    $(this).toggleClass('opened');
+    $('.filters_body').slideToggle();
+    $(this).find('i').toggleClass('fa-plus fa-minus');
+    $('body').toggleClass('filter-opened');
+  });
+  // Add class for selected category
+  $('.form_filters input:checkbox').change(function(){
+    if($(this).is(':checked')) {
+      $(this).parent().addClass('selected');
+    }else{
+      $(this).parent().removeClass('selected');
+    }
+  });
+  // Count articles results
+  articlesNum = $('#wpas-results article').length;
+  $('.search_results span').text(articlesNum);
+  $('.advanced-search').on('select', function(){
+
+    console.log(articlesNum);
+  });
+  // Change AR icon
+  if($('.btn_lang a').attr('lang') == 'ar'){
+    $('.btn_lang a').text('ع');
+  }
+
   // CONTENT
   // Featured Article Thumbnail height
   thumbHeight();
@@ -84,7 +81,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     $thumbHeight = parseInt($articleHeight) + parseInt($containerMargin) - parseInt($thumbTop);
     $('.featured_article-thumbnail, .main_categories').css({'height': $thumbHeight + 'px'});
   }
-
 
   // Show articles in grid
     $grid = $('.rtl .body_main.grid').isotope({
@@ -102,23 +98,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   // Show no results message
   function noResults(){
     numArticles = $('.body_main.grid article:visible').length;
+    console.log(numArticles);
     if(numArticles === 0) {
     console.log('No Items FOUND!');
     }
   }
-    /*function noResults(){
-      numArticles = $('.grid article:visible').length;
-      noResult = $('.grid-results');
-      if(numArticles === 0) {
-        noResult.show(400);
-      } else {
-        noResult.removeAttr('style');
-      }
-    }*/
    // Filter articles by category
    $optionSets = $('.category_filter');
    $optionLinks = $optionSets.find('a');
-   $optionLinks.on('mousedown', function(){
+   $optionLinks.on('click', function(){
      $this = $(this);
      if ( $this.hasClass('selected') ){
        return false;
@@ -150,28 +138,28 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   $endnotes = $endnotes.text().replace(/[\[\]']+/g, '');
   // Single article header-related icons
     // Show/hide table of content
-    if ($('.has-sidebar .toc_show-hide .btn_close').css('marginTop') == '-35px'){
+    if ($('.has-sidebar .toc_show-hide .show-hide_btn').css('width') == '35px'){
       $('body').toggleClass('has-sidebar hidden-sidebar');
     }
     $('.toc_show-hide span').click(function(){
       if (!$('html').hasClass('is-overlay')) {
         $('body').toggleClass('has-sidebar hidden-sidebar');
-        $(this).parents('.toc_show-hide').toggleClass('toc_close');
+
       }
     });
     // Show/hide options
     sidebarOptions = $('.sidebar_options');
     $('.options_show-hide span').click(function(e){
       if (!$('html').hasClass('is-overlay')) {
+        $('body').toggleClass('options-opened');
         $(sidebarOptions).toggle();
-        e.stopPropagation();
+        $(window).click(function(){
+          $(sidebarOptions).hide();
+          $('body').removeClass('options-opened');
+        });
       }
+      e.stopPropagation();
     });
-
-    $(window).click(function(){
-      $(sidebarOptions).hide();
-    });
-
   // Article reading options
     // Dark mode
 		$('.read-mode_ctrl a').click(function(){

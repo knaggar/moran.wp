@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-20 22:23+0000\n"
+"POT-Creation-Date: 2016-09-25 17:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -66,7 +66,11 @@ msgstr ""
 msgid "Main template"
 msgstr ""
 
-#: index.php:28
+#: index.php:15 includes/wpas_advanced-search.php:64
+msgid "Select Category"
+msgstr ""
+
+#: index.php:31
 msgid "Chosen Article"
 msgstr ""
 
@@ -82,12 +86,16 @@ msgstr ""
 msgid "Archive template"
 msgstr ""
 
-#: archive.php:27
-msgid "Categories Filter:"
+#: archive.php:28
+msgid "Categories Filter"
 msgstr ""
 
-#: archive.php:38
+#: archive.php:40
 msgid "Show all"
+msgstr ""
+
+#. Name of the template
+msgid "Overlay template"
 msgstr ""
 
 #. Name of the template
@@ -124,10 +132,6 @@ msgstr ""
 
 #: templates/article-empty.php:26
 msgid "There is no content here, please try again later"
-msgstr ""
-
-#. Name of the template
-msgid "Overlay template"
 msgstr ""
 
 #. Name of the template
@@ -253,7 +257,7 @@ msgid "Policy Analysis Article"
 msgstr ""
 
 #: includes/wp_custom-post-type.php:16 includes/wp_custom-post-type.php:30 
-#: includes/wpas_advanced-search.php:55
+#: includes/wpas_advanced-search.php:66
 msgid "Policy Analysis"
 msgstr ""
 
@@ -326,7 +330,7 @@ msgid "Facts & Budgets Article"
 msgstr ""
 
 #: includes/wp_custom-post-type.php:57 includes/wp_custom-post-type.php:71 
-#: includes/wpas_advanced-search.php:56
+#: includes/wpas_advanced-search.php:67
 msgid "Facts & Budgets"
 msgstr ""
 
@@ -349,7 +353,7 @@ msgid "Research Article"
 msgstr ""
 
 #: includes/wp_custom-post-type.php:98 includes/wp_custom-post-type.php:112 
-#: includes/wpas_advanced-search.php:57
+#: includes/wpas_advanced-search.php:68
 msgid "Research"
 msgstr ""
 
@@ -372,7 +376,7 @@ msgid "Urban Archive Article"
 msgstr ""
 
 #: includes/wp_custom-post-type.php:139 includes/wp_custom-post-type.php:153 
-#: includes/wpas_advanced-search.php:58
+#: includes/wpas_advanced-search.php:69
 msgid "Urban Archive"
 msgstr ""
 
@@ -388,23 +392,31 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: includes/wpas_advanced-search.php:37
+#: includes/wpas_advanced-search.php:33
+msgid "Show more articles"
+msgstr ""
+
+#: includes/wpas_advanced-search.php:40
 msgid "Enter Search here..."
 msgstr ""
 
-#: includes/wpas_advanced-search.php:54
-msgid "Select Category"
+#: includes/wpas_advanced-search.php:49
+msgid "Search found articles "
 msgstr ""
 
-#: includes/wpas_advanced-search.php:67
+#: includes/wpas_advanced-search.php:57
+msgid "Filter search"
+msgstr ""
+
+#: includes/wpas_advanced-search.php:77
 msgid "Order by"
 msgstr ""
 
-#: includes/wpas_advanced-search.php:68
+#: includes/wpas_advanced-search.php:79
 msgid "Title"
 msgstr ""
 
-#: includes/wpas_advanced-search.php:69
+#: includes/wpas_advanced-search.php:80
 msgid "Date"
 msgstr ""
 

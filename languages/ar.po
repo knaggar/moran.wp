@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: moran\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-20 22:23+0000\n"
-"PO-Revision-Date: 2016-09-21 00:23+0200\n"
+"POT-Creation-Date: 2016-09-25 17:06+0000\n"
+"PO-Revision-Date: 2016-09-25 19:08+0200\n"
 "Last-Translator: dev <go@kareematif.me>\n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
@@ -50,6 +50,14 @@ msgstr ""
 msgid "Archive template"
 msgstr ""
 
+#: archive.php:28
+msgid "Categories Filter"
+msgstr ""
+
+#. Name of the template
+msgid "Overlay template"
+msgstr ""
+
 #. Name of the template
 msgid "article template"
 msgstr ""
@@ -68,10 +76,6 @@ msgstr ""
 
 #: templates/article-empty.php:23
 msgid "Try %s again"
-msgstr ""
-
-#. Name of the template
-msgid "Overlay template"
 msgstr ""
 
 #. Name of the template
@@ -294,13 +298,17 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: includes/wpas_advanced-search.php:54
-msgid "Select Category"
-msgstr "اختر القسم"
+#: includes/wpas_advanced-search.php:33
+msgid "Show more articles"
+msgstr "إظهار مقالات إضافية"
 
-#: includes/wpas_advanced-search.php:67
-msgid "Order by"
-msgstr "رتب حسب"
+#: includes/wpas_advanced-search.php:49
+msgid "Search found articles "
+msgstr "نتائج البحث "
+
+#: includes/wpas_advanced-search.php:57
+msgid "Filter search"
+msgstr "تصفية البحث"
 
 #. Name of the theme
 msgid "moran"
@@ -346,7 +354,11 @@ msgstr "شارك"
 msgid "Download"
 msgstr "تحميل"
 
-#: index.php:28
+#: index.php:15 includes/wpas_advanced-search.php:64
+msgid "Select Category"
+msgstr "اختر القسم"
+
+#: index.php:31
 msgid "Chosen Article"
 msgstr "مقالة مختارة"
 
@@ -354,11 +366,7 @@ msgstr "مقالة مختارة"
 msgid "Contact Us"
 msgstr "تواصل معنا"
 
-#: archive.php:27
-msgid "Categories Filter:"
-msgstr "فلْترة بالقسم:"
-
-#: archive.php:38
+#: archive.php:40
 msgid "Show all"
 msgstr "إظهار الكل"
 
@@ -399,33 +407,37 @@ msgid "Tweet this"
 msgstr "غرد"
 
 #: includes/wp_custom-post-type.php:16 includes/wp_custom-post-type.php:30
-#: includes/wpas_advanced-search.php:55
+#: includes/wpas_advanced-search.php:66
 msgid "Policy Analysis"
 msgstr "تحليل سياسات"
 
 #: includes/wp_custom-post-type.php:57 includes/wp_custom-post-type.php:71
-#: includes/wpas_advanced-search.php:56
+#: includes/wpas_advanced-search.php:67
 msgid "Facts & Budgets"
 msgstr "حقائق وميزانيات"
 
 #: includes/wp_custom-post-type.php:98 includes/wp_custom-post-type.php:112
-#: includes/wpas_advanced-search.php:57
+#: includes/wpas_advanced-search.php:68
 msgid "Research"
 msgstr "أبحاث ومقالات"
 
 #: includes/wp_custom-post-type.php:139 includes/wp_custom-post-type.php:153
-#: includes/wpas_advanced-search.php:58
+#: includes/wpas_advanced-search.php:69
 msgid "Urban Archive"
 msgstr "أرشيف العمران"
 
-#: includes/wpas_advanced-search.php:37
+#: includes/wpas_advanced-search.php:40
 msgid "Enter Search here..."
 msgstr "اكتب كلمات البحث"
 
-#: includes/wpas_advanced-search.php:68
+#: includes/wpas_advanced-search.php:77
+msgid "Order by"
+msgstr "رتب حسب"
+
+#: includes/wpas_advanced-search.php:79
 msgid "Title"
 msgstr "العنوان"
 
-#: includes/wpas_advanced-search.php:69
+#: includes/wpas_advanced-search.php:80
 msgid "Date"
 msgstr "التاريخ"

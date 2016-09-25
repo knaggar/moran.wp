@@ -82,7 +82,7 @@ $document_icons = array('pdf' => 'fa-file-pdf', 'doc' => 'fa-file-word-o'); // u
       </div>
     </div>
   <div class="top_btn ctrl-btn">
-    <span class="btn_top">
+    <span class="btn_top btn">
       <i class="fa fa-angle-up"></i>
     </span>
   </div>

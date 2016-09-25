@@ -1,18 +1,18 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: moran\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-18 22:24+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"POT-Creation-Date: 2016-09-20 22:23+0000\n"
+"PO-Revision-Date: 2016-09-21 00:23+0200\n"
+"Last-Translator: dev <go@kareematif.me>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100 >= 3 "
+"&& n%100<=10 ? 3 : n%100 >= 11 && n%100<=99 ? 4 : 5;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco - https://localise.biz/"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #. Name of the template
 msgid "page template"
@@ -30,30 +30,6 @@ msgstr ""
 msgid "Sidebar template"
 msgstr ""
 
-#: sidebar.php:24
-msgid "Contents"
-msgstr ""
-
-#: sidebar.php:37
-msgid "Reading options"
-msgstr ""
-
-#: sidebar.php:44
-msgid "Reading mode"
-msgstr ""
-
-#: sidebar.php:52
-msgid "Font size"
-msgstr ""
-
-#: sidebar.php:62 templates/article-single.php:101
-msgid "Share"
-msgstr ""
-
-#: sidebar.php:71 templates/article-single.php:84
-msgid "Download"
-msgstr ""
-
 #: functions.php:26
 msgid "Primary Naviation"
 msgstr ""
@@ -66,28 +42,12 @@ msgstr ""
 msgid "Main template"
 msgstr ""
 
-#: index.php:16
-msgid "Chosen Article"
-msgstr ""
-
 #. Name of the template
 msgid "Footer template"
 msgstr ""
 
-#: footer.php:36
-msgid "Contact Us"
-msgstr ""
-
 #. Name of the template
 msgid "Archive template"
-msgstr ""
-
-#: archive.php:27
-msgid "Categories Filter:"
-msgstr ""
-
-#: archive.php:38
-msgid "Show all"
 msgstr ""
 
 #. Name of the template
@@ -96,18 +56,6 @@ msgstr ""
 
 #. Name of the template
 msgid "single article template"
-msgstr ""
-
-#: templates/article-single.php:52
-msgid "Published in "
-msgstr ""
-
-#: templates/article-single.php:95
-msgid "Last reviewed in <br />"
-msgstr ""
-
-#: templates/article-single.php:111
-msgid "Tags"
 msgstr ""
 
 #. Name of the template
@@ -122,10 +70,6 @@ msgstr ""
 msgid "Try %s again"
 msgstr ""
 
-#: templates/article-empty.php:26
-msgid "There is no content here, please try again later"
-msgstr ""
-
 #. Name of the template
 msgid "Overlay template"
 msgstr ""
@@ -134,30 +78,12 @@ msgstr ""
 msgid "feature article template"
 msgstr ""
 
-#: templates/article-featured.php:42
-msgid "Read more"
-msgstr ""
-
 #. Name of the template
 msgid "Page template"
 msgstr ""
 
 #. Name of the template
 msgid "credit template"
-msgstr ""
-
-#: templates/footer-credit.php:13
-msgid ""
-"except for <a href=\"%s\">website design & develop</a>, or mentioned "
-"elsewhere,<br /> This work is provided under a Creative Commons License"
-msgstr ""
-
-#: includes/wp_social-service.php:21
-msgid "Share on Facebook"
-msgstr ""
-
-#: includes/wp_social-service.php:26
-msgid "Tweet this"
 msgstr ""
 
 #: includes/wp_custom-taxonomy.php:15
@@ -252,60 +178,56 @@ msgctxt "Singular Name"
 msgid "Policy Analysis Article"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:16 includes/wp_custom-post-type.php:30
-msgid "Policy Analysis"
-msgstr ""
-
 #: includes/wp_custom-post-type.php:17
 msgid "All Policy Analysis Articles"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:18 includes/wp_custom-post-type.php:59 
+#: includes/wp_custom-post-type.php:18 includes/wp_custom-post-type.php:59
 #: includes/wp_custom-post-type.php:100 includes/wp_custom-post-type.php:141
 msgid "Add New"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:19 includes/wp_custom-post-type.php:60 
+#: includes/wp_custom-post-type.php:19 includes/wp_custom-post-type.php:60
 #: includes/wp_custom-post-type.php:101 includes/wp_custom-post-type.php:142
 msgid "Add New Article"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:20 includes/wp_custom-post-type.php:61 
+#: includes/wp_custom-post-type.php:20 includes/wp_custom-post-type.php:61
 #: includes/wp_custom-post-type.php:102 includes/wp_custom-post-type.php:143
 msgid "Edit"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:21 includes/wp_custom-post-type.php:62 
+#: includes/wp_custom-post-type.php:21 includes/wp_custom-post-type.php:62
 #: includes/wp_custom-post-type.php:103 includes/wp_custom-post-type.php:144
 msgid "Edit Article"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:22 includes/wp_custom-post-type.php:63 
+#: includes/wp_custom-post-type.php:22 includes/wp_custom-post-type.php:63
 #: includes/wp_custom-post-type.php:104 includes/wp_custom-post-type.php:145
 msgid "New Article"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:23 includes/wp_custom-post-type.php:64 
+#: includes/wp_custom-post-type.php:23 includes/wp_custom-post-type.php:64
 #: includes/wp_custom-post-type.php:105 includes/wp_custom-post-type.php:146
 msgid "View"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:24 includes/wp_custom-post-type.php:65 
+#: includes/wp_custom-post-type.php:24 includes/wp_custom-post-type.php:65
 #: includes/wp_custom-post-type.php:106 includes/wp_custom-post-type.php:147
 msgid "View Article"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:25 includes/wp_custom-post-type.php:66 
+#: includes/wp_custom-post-type.php:25 includes/wp_custom-post-type.php:66
 #: includes/wp_custom-post-type.php:107 includes/wp_custom-post-type.php:148
 msgid "Search Articles"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:26 includes/wp_custom-post-type.php:67 
+#: includes/wp_custom-post-type.php:26 includes/wp_custom-post-type.php:67
 #: includes/wp_custom-post-type.php:108 includes/wp_custom-post-type.php:149
 msgid "No Articles found"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:27 includes/wp_custom-post-type.php:68 
+#: includes/wp_custom-post-type.php:27 includes/wp_custom-post-type.php:68
 #: includes/wp_custom-post-type.php:109 includes/wp_custom-post-type.php:150
 msgid "No Articles found in Trash"
 msgstr ""
@@ -322,10 +244,6 @@ msgstr ""
 #: includes/wp_custom-post-type.php:56
 msgctxt "Singular Name"
 msgid "Facts & Budgets Article"
-msgstr ""
-
-#: includes/wp_custom-post-type.php:57 includes/wp_custom-post-type.php:71
-msgid "Facts & Budgets"
 msgstr ""
 
 #: includes/wp_custom-post-type.php:58
@@ -346,10 +264,6 @@ msgctxt "Singular Name"
 msgid "Research Article"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:98 includes/wp_custom-post-type.php:112
-msgid "Research"
-msgstr ""
-
 #: includes/wp_custom-post-type.php:99
 msgid "All Research Articles"
 msgstr ""
@@ -368,10 +282,6 @@ msgctxt "Singular Name"
 msgid "Urban Archive Article"
 msgstr ""
 
-#: includes/wp_custom-post-type.php:139 includes/wp_custom-post-type.php:153
-msgid "Urban Archive"
-msgstr ""
-
 #: includes/wp_custom-post-type.php:140
 msgid "All Urban Archive Articles"
 msgstr ""
@@ -384,17 +294,13 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: includes/wpas_advanced-search.php:37
-msgid "Enter Search here..."
-msgstr ""
+#: includes/wpas_advanced-search.php:54
+msgid "Select Category"
+msgstr "اختر القسم"
 
-#: includes/wpas_advanced-search.php:68
-msgid "Title"
-msgstr ""
-
-#: includes/wpas_advanced-search.php:69
-msgid "Date"
-msgstr ""
+#: includes/wpas_advanced-search.php:67
+msgid "Order by"
+msgstr "رتب حسب"
 
 #. Name of the theme
 msgid "moran"
@@ -415,3 +321,111 @@ msgstr ""
 #. Author URI of the theme
 msgid "http://kaeid.io"
 msgstr ""
+
+#: sidebar.php:24
+msgid "Contents"
+msgstr "المحتويات"
+
+#: sidebar.php:37
+msgid "Reading options"
+msgstr "خيارات القراءة"
+
+#: sidebar.php:44
+msgid "Reading mode"
+msgstr "نظام القراءة"
+
+#: sidebar.php:52
+msgid "Font size"
+msgstr "حجم الخط"
+
+#: sidebar.php:62 templates/article-single.php:103
+msgid "Share"
+msgstr "شارك"
+
+#: sidebar.php:71 templates/article-single.php:86
+msgid "Download"
+msgstr "تحميل"
+
+#: index.php:28
+msgid "Chosen Article"
+msgstr "مقالة مختارة"
+
+#: footer.php:36
+msgid "Contact Us"
+msgstr "تواصل معنا"
+
+#: archive.php:27
+msgid "Categories Filter:"
+msgstr "فلْترة بالقسم:"
+
+#: archive.php:38
+msgid "Show all"
+msgstr "إظهار الكل"
+
+#: templates/article-single.php:52
+msgid "Published in "
+msgstr "نشرت في "
+
+#: templates/article-single.php:97
+msgid "Last reviewed in <br />"
+msgstr "تم مراجعتها في <br />"
+
+#: templates/article-single.php:113
+msgid "Tags"
+msgstr "وسوم"
+
+#: templates/article-empty.php:26
+msgid "There is no content here, please try again later"
+msgstr "لا يوجد محتوى، برجاء محاولة مرة أخرى"
+
+#: templates/article-featured.php:42
+msgid "Read more"
+msgstr "اقرأ المزيد"
+
+#: templates/footer-credit.php:13
+msgid ""
+"except for <a href=\"%s\">website design & develop</a>, or mentioned "
+"elsewhere,<br /> This work is provided under a Creative Commons License"
+msgstr ""
+"فيما عدا <a href=\"%s\"> تصميم وتطوير الموقع</a>، أو ما لم يتم الإشارة له،"
+"<br /> فإن هذا العمل تحت رخصة المشاع الإبداعي."
+
+#: includes/wp_social-service.php:21
+msgid "Share on Facebook"
+msgstr "شارك على فيسبوك"
+
+#: includes/wp_social-service.php:26
+msgid "Tweet this"
+msgstr "غرد"
+
+#: includes/wp_custom-post-type.php:16 includes/wp_custom-post-type.php:30
+#: includes/wpas_advanced-search.php:55
+msgid "Policy Analysis"
+msgstr "تحليل سياسات"
+
+#: includes/wp_custom-post-type.php:57 includes/wp_custom-post-type.php:71
+#: includes/wpas_advanced-search.php:56
+msgid "Facts & Budgets"
+msgstr "حقائق وميزانيات"
+
+#: includes/wp_custom-post-type.php:98 includes/wp_custom-post-type.php:112
+#: includes/wpas_advanced-search.php:57
+msgid "Research"
+msgstr "أبحاث ومقالات"
+
+#: includes/wp_custom-post-type.php:139 includes/wp_custom-post-type.php:153
+#: includes/wpas_advanced-search.php:58
+msgid "Urban Archive"
+msgstr "أرشيف العمران"
+
+#: includes/wpas_advanced-search.php:37
+msgid "Enter Search here..."
+msgstr "اكتب كلمات البحث"
+
+#: includes/wpas_advanced-search.php:68
+msgid "Title"
+msgstr "العنوان"
+
+#: includes/wpas_advanced-search.php:69
+msgid "Date"
+msgstr "التاريخ"

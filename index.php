@@ -11,13 +11,16 @@ get_header();
 
   if(is_front_page()): ?>
   <div class="main_categories">
+    <h3 class="categories_title">
+      <?php echo _e('Select Category', 'moran'); ?>
+    </h3>
     <?php // Show Category navigation
     wp_nav_menu(array(
       'theme_location' => 'category',
       'container_id'   => 'categories_nav',
       'container_class'   => 'categories_nav',
       'menu_class'     => 'nav-cat_menu',
-      'link_before' => '<span>',
+      'link_before' => '<span><i class="nav_icon"></i>',
       'link_after' => '</span>'
     ));
     ?>

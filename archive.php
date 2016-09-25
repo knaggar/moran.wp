@@ -24,21 +24,24 @@ get_header(); ?>
       </h1>
     <?php if (have_posts()): ?>
       <div class="category_filter">
-        <span class="filter-title"><?php echo _e('Categories Filter:', 'moran'); ?></span>
-        <ul>
-        <?php foreach ($post_types as $post_type): ?>
-          <li>
-            <a href="#" data-filter="<?php echo '.' . $post_type->name ?>">
-              <?php echo $post_type->labels->menu_name ?>
-            </a>
-          </li>
-        <?php endforeach; ?>
-          <li>
-            <a href="#" class="selected" data-filter="*">
-              <?php echo _e('Show all', 'moran'); ?>
-            </a>
-          </li>
-        </ul>
+        <div class="filters_header">
+          <h3 class="filters_title"><?php echo _e('Categories Filter', 'moran'); ?></h3>
+          <span class="filters_icon"><i class="fa fa-plus"></i></span>
+        </div>
+        <div class="filters_body">
+          <ul>
+            <?php foreach ($post_types as $post_type): ?>
+              <li>
+                <a href="#" data-filter="<?php echo '.' . $post_type->name ?>"><?php echo $post_type->labels->menu_name ?></a>
+              </li>
+            <?php endforeach; ?>
+            <li>
+              <a href="#" class="selected" data-filter="*">
+                <?php echo _e('Show all', 'moran'); ?>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
     <?php endif; ?>
